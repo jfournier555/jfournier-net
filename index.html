@@ -5,6 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Justin Fournier — Customer Solutions Engineer</title>
 <meta name="description" content="Justin Fournier — Enterprise Customer Solutions Engineer. Technical discovery, PoCs, and competitive displacement — pre-sales depth with post-sale staying power.">
+<link rel="canonical" href="https://jfournier.net/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jfournier.net">
+<meta property="og:title" content="Justin Fournier — Customer Solutions Engineer">
+<meta property="og:description" content="Technical discovery, PoCs, and competitive displacement — pre-sales depth with post-sale staying power.">
+<meta property="og:url" content="https://jfournier.net/">
+<meta property="og:image" content="https://jfournier.net/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Justin Fournier — Customer Solutions Engineer">
+<meta name="twitter:description" content="Technical discovery, PoCs, and competitive displacement — pre-sales depth with post-sale staying power.">
+<meta name="twitter:image" content="https://jfournier.net/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Justin Fournier",
+  "url": "https://jfournier.net/",
+  "jobTitle": "Customer Solutions Engineer",
+  "address": {"@type": "PostalAddress", "addressLocality": "Las Vegas", "addressRegion": "NV", "addressCountry": "US"},
+  "sameAs": ["https://www.linkedin.com/in/jfournier555/"],
+  "knowsAbout": ["Sales Engineering", "Technical Discovery", "Proof of Concept", "Competitive Displacement", "Customer Success", "Enterprise SaaS", "AI Agent Workflows"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -416,6 +439,13 @@
     });
   },{rootMargin:'-40% 0px -55% 0px'});
   secs.forEach(id=>{ const el=document.getElementById(id); if(el) so.observe(el); });
+  // outbound click tracking -> Cloudflare Zaraz (no-op until Zaraz is enabled)
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a'); if(!a || !a.href) return;
+    var label = a.href.indexOf('linkedin.com') > -1 ? 'linkedin'
+      : a.href.indexOf('mailto:') === 0 ? 'email' : 'outbound';
+    try { if(window.zaraz) zaraz.track('link_click', {label: label}); } catch(_){}
+  });
 </script>
 </body>
 </html>
