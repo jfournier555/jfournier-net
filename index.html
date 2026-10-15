@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Fournier — Customer Solutions Engineer</title>
+<meta name="description" content="Justin Fournier — Enterprise Customer Solutions Engineer. Technical discovery, PoCs, and competitive displacement for enterprise SaaS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0c0e;
+    --surface:#121316;
+    --surface-2:#17181c;
+    --line:#232529;
+    --text:#ededef;
+    --muted:#9a9ca3;
+    --faint:#5c5e66;
+    --accent:#5b9dff;
+    --accent-soft:rgba(91,157,255,.10);
+    --radius:14px;
+    --font-display:'Space Grotesk',system-ui,sans-serif;
+    --font-body:'Inter',system-ui,sans-serif;
+    --font-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* subtle grid backdrop */
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+    background-size:56px 56px;
+    mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,black 30%,transparent 100%);
+    -webkit-mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,black 30%,transparent 100%);
+    pointer-events:none;
+    z-index:0;
+  }
+  ::selection{background:var(--accent);color:#0b0c0e}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    background:rgba(11,12,14,.72);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1080px;margin:0 auto;padding:0 28px;height:62px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{font-family:var(--font-mono);font-size:14px;letter-spacing:.06em;color:var(--text)}
+  .brand b{color:var(--accent);font-weight:500}
+  .nav-links{display:flex;gap:28px;font-size:13.5px;color:var(--muted)}
+  .nav-links a{transition:color .18s}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a.active{color:var(--accent)}
+  @media(max-width:640px){.nav-links{gap:18px;font-size:12.5px}}
+
+  /* ---------- hero ---------- */
+  header{padding:172px 0 96px}
+  .kicker{
+    font-family:var(--font-mono);font-size:12.5px;letter-spacing:.14em;
+    color:var(--accent);text-transform:uppercase;margin-bottom:22px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .kicker::before{content:"";width:26px;height:1px;background:var(--accent);display:inline-block}
+  h1{
+    font-family:var(--font-display);
+    font-size:clamp(46px,7.5vw,84px);
+    line-height:1.02;font-weight:700;letter-spacing:-.02em;
+    margin-bottom:24px;
+  }
+  h1 .thin{color:var(--faint);font-weight:500}
+  .lede{font-size:19px;color:var(--muted);max-width:640px;margin-bottom:40px}
+  .lede strong{color:var(--text);font-weight:600}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:var(--font-mono);font-size:13.5px;letter-spacing:.03em;
+    padding:13px 24px;border-radius:10px;
+    border:1px solid var(--line);color:var(--text);
+    background:var(--surface);
+    transition:transform .16s,border-color .16s,background .16s;
+  }
+  .btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#0b0c0e;font-weight:500}
+  .btn.primary:hover{background:#7db4ff}
+  .hero-meta{
+    margin-top:64px;padding-top:26px;border-top:1px solid var(--line);
+    display:flex;gap:36px;flex-wrap:wrap;
+    font-family:var(--font-mono);font-size:12.5px;color:var(--faint);letter-spacing:.04em;
+  }
+  .hero-meta span b{color:var(--muted);font-weight:500}
+
+  /* ---------- sections ---------- */
+  section{padding:88px 0}
+  .sec-label{
+    font-family:var(--font-mono);font-size:12.5px;letter-spacing:.14em;
+    color:var(--faint);text-transform:uppercase;margin-bottom:14px;
+  }
+  .sec-label::before{content:"// ";color:var(--accent)}
+  h2{
+    font-family:var(--font-display);font-size:clamp(30px,4vw,42px);
+    letter-spacing:-.015em;line-height:1.12;margin-bottom:16px;font-weight:600;
+  }
+  .sec-sub{color:var(--muted);max-width:620px;margin-bottom:48px;font-size:17px}
+
+  /* ---------- cards ---------- */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:720px){.cards{grid-template-columns:1fr}}
+  .card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:30px 28px;
+    transition:transform .18s,border-color .18s,background .18s;
+    position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-3px);border-color:rgba(91,157,255,.45);background:var(--surface-2)}
+  .card .num{
+    font-family:var(--font-mono);font-size:12px;color:var(--accent);
+    letter-spacing:.1em;margin-bottom:16px;display:block;
+  }
+  .card h3{font-family:var(--font-display);font-size:20px;margin-bottom:10px;font-weight:600;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:15px;line-height:1.65}
+  .card p strong{color:var(--text);font-weight:500}
+
+  /* ---------- stats ---------- */
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--surface);overflow:hidden;
+  }
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+  .stat{padding:34px 26px;border-left:1px solid var(--line)}
+  .stat:first-child{border-left:none}
+  @media(max-width:720px){
+    .stat{border-left:none;border-top:1px solid var(--line)}
+    .stat:nth-child(-n+2){border-top:none}
+    .stat:nth-child(even){border-left:1px solid var(--line)}
+  }
+  .stat .v{
+    font-family:var(--font-display);font-size:clamp(28px,3.4vw,38px);
+    font-weight:700;color:var(--accent);letter-spacing:-.02em;line-height:1.1;
+  }
+  .stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.5}
+
+  /* ---------- principles ---------- */
+  .principles{border-top:1px solid var(--line)}
+  .principle{
+    display:flex;gap:26px;align-items:baseline;
+    padding:28px 4px;border-bottom:1px solid var(--line);
+  }
+  .p-num{font-family:var(--font-mono);font-size:12.5px;color:var(--accent);letter-spacing:.1em;flex-shrink:0}
+  .principle h3{font-family:var(--font-display);font-size:19px;font-weight:600;margin-bottom:6px;letter-spacing:-.01em}
+  .principle p{color:var(--muted);font-size:15px;max-width:640px}
+
+  /* ---------- timeline ---------- */
+  .timeline{border-left:1px solid var(--line);margin-left:6px;padding-left:34px;display:flex;flex-direction:column;gap:34px}
+  .t-item{position:relative}
+  .t-item::before{
+    content:"";position:absolute;left:-40.5px;top:7px;width:11px;height:11px;border-radius:50%;
+    background:var(--bg);border:2px solid var(--faint);
+  }
+  .t-item.current::before{border-color:var(--accent);background:var(--accent-soft)}
+  .t-role{font-family:var(--font-display);font-size:18px;font-weight:600}
+  .t-co{font-family:var(--font-mono);font-size:12.5px;color:var(--accent);letter-spacing:.05em;margin:4px 0 8px}
+  .t-dates{font-family:var(--font-mono);font-size:12px;color:var(--faint);letter-spacing:.04em;margin-bottom:8px}
+  .t-item p{color:var(--muted);font-size:15px;max-width:640px}
+
+  /* ---------- elsewhere ---------- */
+  .links{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:720px){.links{grid-template-columns:1fr}}
+  .link-card{
+    display:flex;align-items:center;justify-content:space-between;
+    border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 24px;background:var(--surface);
+    transition:transform .16s,border-color .16s;
+  }
+  .link-card:hover{transform:translateY(-2px);border-color:rgba(91,157,255,.45)}
+  .link-card .t{font-weight:600;font-size:16px}
+  .link-card .d{font-family:var(--font-mono);font-size:12.5px;color:var(--faint);margin-top:3px}
+  .link-card .arrow{font-family:var(--font-mono);color:var(--accent);font-size:18px}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:44px 0 54px;margin-top:40px}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  .foot .f-brand{font-family:var(--font-display);font-weight:600;font-size:17px}
+  .foot .f-sub{font-family:var(--font-mono);font-size:12.5px;color:var(--faint);margin-top:4px}
+  .foot .f-mail{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+  .foot .f-mail:hover{color:var(--accent)}
+
+  /* ---------- reveal ---------- */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top"><b>jf</b>ournier.net</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#how">Approach</a>
+      <a href="#background">Background</a>
+      <a href="#elsewhere">Elsewhere</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <div class="kicker rv">Customer Solutions Engineer — Enterprise SaaS</div>
+    <h1 class="rv">Justin Fournier<span class="thin">.</span></h1>
+    <p class="lede rv">I run <strong>technical evaluations that turn skeptics into customers</strong> — deep discovery, honest PoCs, and demos built around the buyer's actual problem. Not the slide deck.</p>
+    <div class="cta-row rv">
+      <a class="btn primary" href="https://www.linkedin.com/in/jfournier555/" target="_blank" rel="noopener">LinkedIn →</a>
+      <a class="btn" href="mailto:JFournier555@gmail.com">JFournier555@gmail.com</a>
+    </div>
+    <div class="hero-meta rv">
+      <span><b>BASED</b> &nbsp;Las Vegas, NV</span>
+      <span><b>FOCUS</b> &nbsp;Sales engineering and success</span>
+      <span><b>STACK</b> &nbsp;SaaS · MCP · AI agent workflows</span>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-label rv">What I do</div>
+    <h2 class="rv">Technical depth,<br>commercial outcomes.</h2>
+    <p class="sec-sub rv">Ten years across implementation, customer success, and now sales engineering. The throughline: I find the technical truth, then turn it into revenue.</p>
+    <div class="cards">
+      <div class="card rv">
+        <span class="num">01</span>
+        <h3>Technical Discovery &amp; PoCs</h3>
+        <p>Discovery that surfaces the <strong>real buying criteria</strong> — then evaluations with defined success criteria and executive readouts. No science projects, no shelfware.</p>
+      </div>
+      <div class="card rv">
+        <span class="num">02</span>
+        <h3>Competitive Displacement</h3>
+        <p>Unseating entrenched incumbents with <strong>technical win themes</strong> and de-risked migration paths. I make switching feel inevitable — never scary.</p>
+      </div>
+      <div class="card rv">
+        <span class="num">03</span>
+        <h3>AI-Augmented Evaluations</h3>
+        <p>I bring AI into the sales cycle itself — <strong>live agent workflows</strong> run against the customer's own data, so buyers see their future state instead of a slide deck.</p>
+      </div>
+      <div class="card rv">
+        <span class="num">04</span>
+        <h3>Success &amp; Expansion</h3>
+        <p>A decade in post-sale before pre-sales: onboarding, adoption, QBRs, executive advocacy. <strong>$1.56M in expansion in a single fiscal year</strong> — growth earned through trust, not pressure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-label rv">How I work</div>
+    <h2 class="rv">Principles, not platitudes.</h2>
+    <p class="sec-sub rv">The operating system I bring to any company — portable across products, teams, and logos.</p>
+    <div class="principles rv">
+      <div class="principle">
+        <span class="p-num">01</span>
+        <div>
+          <h3>Lead with the conclusion.</h3>
+          <p>Analysis is proof, not the pitch. If it doesn't fit in one sentence, it's not ready to say out loud.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <span class="p-num">02</span>
+        <div>
+          <h3>Say when it's not a fit.</h3>
+          <p>I'll talk a buyer out of the wrong purchase. Trust compounds — oversold deals just churn later.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <span class="p-num">03</span>
+        <div>
+          <h3>The AE is a partner, not a handoff.</h3>
+          <p>We run the deal together, discovery through close. Nothing gets thrown over the wall.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <span class="p-num">04</span>
+        <div>
+          <h3>Discovery before demo. Always.</h3>
+          <p>No generic walkthroughs. I earn the right to show product by understanding the problem first.</p>
+        </div>
+      </div>
+    </div>
+    <div class="stats rv" style="margin-top:54px">
+      <div class="stat">
+        <div class="v">$3.4M</div>
+        <div class="l">Enterprise ARR book managed</div>
+      </div>
+      <div class="stat">
+        <div class="v">$1.56M</div>
+        <div class="l">Expansion revenue, single fiscal year</div>
+      </div>
+      <div class="stat">
+        <div class="v">98%</div>
+        <div class="l">Monthly customer retention rate</div>
+      </div>
+      <div class="stat">
+        <div class="v">15+</div>
+        <div class="l">Years across SaaS implementation, CS &amp; SE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap">
+    <div class="sec-label rv">Background</div>
+    <h2 class="rv">The short version.</h2>
+    <p class="sec-sub rv">Every role earned the hard way — no shortcuts, no coasting.</p>
+    <div class="timeline">
+      <div class="t-item current rv">
+        <div class="t-role">Customer Solutions Engineer</div>
+        <div class="t-co">FULLSTORY</div>
+        <div class="t-dates">JUL 2026 — PRESENT</div>
+        <p>Pre-sales engineering for enterprise accounts: technical discovery, PoCs, competitive displacement plays, and AI-agent workflow sessions with customer engineering teams.</p>
+      </div>
+      <div class="t-item rv">
+        <div class="t-role">Principal Customer Success Manager</div>
+        <div class="t-co">FULLSTORY</div>
+        <div class="t-dates">2021 — JUN 2026</div>
+        <p>$3.4M ARR enterprise book. $1.56M expansion in FY2024. Mentored APAC success managers; led executive QBRs.</p>
+      </div>
+      <div class="t-item rv">
+        <div class="t-role">Enterprise Account Manager</div>
+        <div class="t-co">DRCHRONO</div>
+        <div class="t-dates">2019 — 2021</div>
+        <p>$2.2M ARR portfolio, 98% retention, 17% over quota. President's Club 2020.</p>
+      </div>
+      <div class="t-item rv">
+        <div class="t-role">Clinical Training Specialist II</div>
+        <div class="t-co">MEMORIALCARE</div>
+        <div class="t-dates">2013 — 2019</div>
+        <p>Led implementation across 15+ acquired practices; trained 500+ clinical and admin users on healthcare platforms.</p>
+      </div>
+      <div class="t-item rv">
+        <div class="t-role">Partner Implementations, Care360</div>
+        <div class="t-co">KAREO</div>
+        <div class="t-dates">2011 — 2013</div>
+        <p>End-to-end SaaS implementation for 20+ strategic partners. 80%+ NPS on training.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="elsewhere" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-label rv">Elsewhere</div>
+    <h2 class="rv">Find me.</h2>
+    <p class="sec-sub rv">Direct lines. No forms, no funnels.</p>
+    <div class="links">
+      <a class="link-card rv" href="https://www.linkedin.com/in/jfournier555/" target="_blank" rel="noopener">
+        <div><div class="t">LinkedIn</div><div class="d">professional profile &amp; work history</div></div>
+        <div class="arrow">→</div>
+      </a>
+      <a class="link-card rv" href="mailto:JFournier555@gmail.com">
+        <div><div class="t">Email</div><div class="d">JFournier555@gmail.com</div></div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="f-brand">Justin Fournier</div>
+        <div class="f-sub">LAS VEGAS, NV — <span id="yr">2026</span></div>
+      </div>
+      <a class="f-mail" href="mailto:JFournier555@gmail.com">JFournier555@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  // nav active state
+  const secs = ['work','how','background','elsewhere'];
+  const navAs = document.querySelectorAll('.nav-links a');
+  const so = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        navAs.forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+e.target.id));
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(id=>{ const el=document.getElementById(id); if(el) so.observe(el); });
+</script>
+</body>
+</html>
