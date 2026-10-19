@@ -1,0 +1,2 @@
+# Canonicalize www -> apex (SEO: kill duplicate-host serving)
+https://www.jfournier.net/* https://jfournier.net/:splat 301
