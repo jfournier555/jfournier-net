@@ -1,4 +1,5 @@
-# Canonicalize www -> apex (SEO: kill duplicate-host serving)
-https://www.jfournier.net/* https://jfournier.net/:splat 301
-
-/redirect-test-xyz / 302
+# NOTE 2026-10-19: www -> apex canonicalization is handled by a zone-level
+# Redirect Rule ("www to apex") in the Cloudflare dashboard, NOT here.
+# A Worker/zone layer fronts this Pages project, so _redirects host-based
+# rules (e.g. https://www.jfournier.net/* ...) never match — verified:
+# path rules fire, host rules don't. Keep host redirects in zone rules.
