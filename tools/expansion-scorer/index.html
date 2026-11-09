@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expansion Readiness Scorer — Justin Fournier</title>
+<meta name="description" content="Score whether an account is ready to expand, or whether the renewal comes first. Six weighted criteria and four red flags that separate a real expansion from a discount conversation. Free, in the browser, no data leaves the page.">
+<link rel="canonical" href="https://jfournier.net/tools/expansion-scorer/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%235b9dff' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jfournier.net">
+<meta property="og:title" content="Expansion Readiness Scorer — Justin Fournier">
+<meta property="og:description" content="Score whether an account is ready to expand, or whether the renewal comes first. Six weighted criteria and four red flags.">
+<meta property="og:url" content="https://jfournier.net/tools/expansion-scorer/">
+<meta property="og:image" content="https://jfournier.net/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Expansion Readiness Scorer — Justin Fournier">
+<meta name="twitter:description" content="Score whether an account is ready to expand, or whether the renewal comes first. Six weighted criteria and four red flags.">
+<meta name="twitter:image" content="https://jfournier.net/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Expansion Readiness Scorer",
+  "url": "https://jfournier.net/tools/expansion-scorer/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0"},
+  "author": {"@type": "Person", "name": "Justin Fournier", "url": "https://jfournier.net/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../scorecards.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="/"><b>jf</b>ournier.net</a>
+    <a href="/tools/renewal-scorecard/">Renewal Scorecard →</a>
+  </div>
+
+  <header class="tool-head">
+    <div class="kicker">Free tool — no signup</div>
+    <h1>Expansion Readiness Scorer.</h1>
+    <p class="lede">Score whether an account is ready to expand. <strong>An at-risk account doesn't expand, it churns.</strong> The renewal case comes first.</p>
+    <p class="privacy">Runs entirely in your browser. Nothing you enter leaves this page.</p>
+  </header>
+
+  <main>
+    <section class="tool-sec" id="criteria">
+      <div class="sec-label">The expansion</div>
+      <div class="sec-title">Six criteria, weighted.</div>
+      <p class="sec-sub">Demonstrated value carries the most weight. If the customer can't say what the product did for them, the expansion conversation is a discount conversation.</p>
+
+      <div class="criterion" data-key="value" data-weight="3">
+        <h3>Value demonstrated <span class="w">WEIGHT ×3</span></h3>
+        <p>The customer can say what the product did for them, in their own metrics.</p>
+        <div class="opts">
+          <label><input type="radio" name="value" value="0"><span>No</span></label>
+          <label><input type="radio" name="value" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="value" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="gaps" data-weight="2">
+        <h3>Usage gaps <span class="w">WEIGHT ×2</span></h3>
+        <p>There are real usage gaps: features they own but don't use, or seats that would get used.</p>
+        <div class="opts">
+          <label><input type="radio" name="gaps" value="0"><span>No</span></label>
+          <label><input type="radio" name="gaps" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="gaps" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="adoption" data-weight="2">
+        <h3>Adoption depth <span class="w">WEIGHT ×2</span></h3>
+        <p>Adoption is deep: the right users on the right features, not one power user.</p>
+        <div class="opts">
+          <label><input type="radio" name="adoption" value="0"><span>No</span></label>
+          <label><input type="radio" name="adoption" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="adoption" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="stakeholders" data-weight="2">
+        <h3>Stakeholder coverage <span class="w">WEIGHT ×2</span></h3>
+        <p>The champion and the economic buyer are both in the loop, not a single thread.</p>
+        <div class="opts">
+          <label><input type="radio" name="stakeholders" value="0"><span>No</span></label>
+          <label><input type="radio" name="stakeholders" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="stakeholders" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="signals" data-weight="2">
+        <h3>Commercial signals <span class="w">WEIGHT ×2</span></h3>
+        <p>Usage is stable or growing, support load is normal, no at-risk signals.</p>
+        <div class="opts">
+          <label><input type="radio" name="signals" value="0"><span>No</span></label>
+          <label><input type="radio" name="signals" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="signals" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="case" data-weight="2">
+        <h3>Business case <span class="w">WEIGHT ×2</span></h3>
+        <p>There's a business case for the expansion: a metric it moves and a number attached.</p>
+        <div class="opts">
+          <label><input type="radio" name="case" value="0"><span>No</span></label>
+          <label><input type="radio" name="case" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="case" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="flags">
+      <div class="sec-label">Red flags</div>
+      <div class="sec-title">Any one of these ends it.</div>
+      <p class="sec-sub">Check any that apply. A single red flag overrides the score — this is not an expansion, it's a renewal save wearing an expansion's clothes.</p>
+      <div class="flags">
+        <label class="flag" data-key="noValue"><input type="checkbox"><span><strong>No demonstrated value</strong> — the customer can't say what it did for them.</span></label>
+        <label class="flag" data-key="atRisk"><input type="checkbox"><span><strong>The account is at risk</strong> — renewal first, expansion later.</span></label>
+        <label class="flag" data-key="shelfware"><input type="checkbox"><span><strong>The "expansion" is shelfware</strong> they already own and don't use.</span></label>
+        <label class="flag" data-key="noBuyer"><input type="checkbox"><span><strong>No economic buyer</strong> in the loop.</span></label>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="result">
+      <div class="verdict idle" id="verdict">
+        <div class="v-score" id="v-score">—</div>
+        <div class="v-title" id="v-title">Score the six criteria above.</div>
+        <p class="v-body" id="v-body">Pick No, Partial, or Yes for each criterion. The verdict updates live. Check a red flag and the answer is not yet, whatever the score says.</p>
+        <div class="fixlist" id="fixlist" hidden>
+          <h4>Fix first</h4>
+          <ul id="fixitems"></ul>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="reset" type="button">Reset scores</button>
+        <a class="btn" href="/tools/renewal-scorecard/">Score the renewal first →</a>
+      </div>
+      <p class="note"><strong>How I use this:</strong> expansion is a pre-sales motion on a post-sale account, and it only works when the renewal case already works. Expansion revenue is the proof the renewal case worked. If the value isn't demonstrated and the account isn't healthy, the expansion conversation turns into a discount conversation — and you just taught the customer to ask for a cheaper price instead of a bigger outcome.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <div class="f-brand">Justin Fournier</div>
+        <div class="f-sub">LAS VEGAS, NV</div>
+      </div>
+      <a class="f-mail" href="mailto:JFournier555@gmail.com">JFournier555@gmail.com</a>
+    </div>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
