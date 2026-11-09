@@ -222,6 +222,11 @@
   .link-card .d{font-family:var(--font-mono);font-size:12.5px;color:var(--faint);margin-top:3px}
   .link-card .arrow{font-family:var(--font-mono);color:var(--accent);font-size:18px}
 
+  /* ---------- tools ---------- */
+  .tool-card{display:block;cursor:pointer}
+  .tool-card:hover{transform:translateY(-2px);border-color:rgba(91,157,255,.45)}
+  .tool-card .go{font-family:var(--font-mono);font-size:13px;color:var(--accent);margin-top:12px}
+
   /* ---------- footer ---------- */
   footer{border-top:1px solid var(--line);padding:44px 0 54px;margin-top:40px}
   .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
@@ -245,6 +250,7 @@
       <a href="#work">Work</a>
       <a href="#how">Approach</a>
       <a href="#background">Background</a>
+      <a href="#tools">Tools</a>
       <a href="#elsewhere">Elsewhere</a>
     </div>
   </div>
@@ -393,6 +399,28 @@
   </div>
 </section>
 
+<section id="tools">
+  <div class="wrap">
+    <div class="sec-label rv">Tools</div>
+    <h2 class="rv">Run it yourself.</h2>
+    <p class="sec-sub rv">Two scorecards from the way I work. Free, in the browser, no signup, no data leaves the page.</p>
+    <div class="cards">
+      <a class="card tool-card rv" href="/tools/poc-scorecard/">
+        <div class="num">01</div>
+        <h3>PoC Evaluation Scorecard</h3>
+        <p>Score an evaluation before you run it. Six weighted criteria and four red flags that separate a real PoC from a science project.</p>
+        <div class="go">Score an evaluation →</div>
+      </a>
+      <a class="card tool-card rv" href="/tools/renewal-scorecard/">
+        <div class="num">02</div>
+        <h3>CSM Renewal Scorecard</h3>
+        <p>Score the renewal on the technical case, not the check-ins. Champion dependency, value realized, and technical health.</p>
+        <div class="go">Score a renewal →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section id="elsewhere" style="padding-top:20px">
   <div class="wrap">
     <div class="sec-label rv">Elsewhere</div>
@@ -432,7 +460,7 @@
   },{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   // nav active state
-  const secs = ['work','how','background','elsewhere'];
+  const secs = ['work','how','background','tools','elsewhere'];
   const navAs = document.querySelectorAll('.nav-links a');
   const so = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
