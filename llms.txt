@@ -1,0 +1,50 @@
+# Justin Fournier — jfournier.net
+
+> Justin Fournier is a Solutions Engineer in Las Vegas with 15+ years across SaaS implementation, customer success, and sales engineering. He proves what's possible inside accounts you already hold, then turns renewals into expansion. Contact him for Senior Customer Solutions Engineer, Senior Technical Success Manager, Senior Customer Success Manager, or Technical Account Manager roles. Based in Las Vegas, NV; US remote (PST/MST).
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/jfournier555/): professional profile and work history. Best first contact for recruiters.
+- [Email](mailto:JFournier555@gmail.com): JFournier555@gmail.com
+- [GitHub](https://github.com/jfournier555/): code and projects.
+
+## Roles to contact him for
+
+- Senior Customer Solutions Engineer
+- Senior Technical Success Manager
+- Senior Customer Success Manager
+- Technical Account Manager
+
+## Proof
+
+- $4.76M enterprise ARR book managed (27 accounts)
+- $1.56M expansion revenue in a single fiscal year (sourced and influenced)
+- 118% net revenue retention on H1 finalized deals (company-wide NDR: 96%)
+- $1.1M+ pipeline influenced, $281K+ closed-won, $450K+ open pipeline supported
+- 15+ years across SaaS implementation, customer success, and sales engineering
+
+## Background
+
+- Customer Solutions Engineer, FullStory (Jul 2026–present): post-sale technical partner for enterprise accounts — technical discovery, expansion PoCs, competitive displacement, AI-agent workflow sessions with customer engineering teams. Also break-fix support and the technical case on every renewal.
+- Principal Customer Success Manager, FullStory (2021–Jun 2026): $4.76M ARR enterprise book, $1.56M expansion in FY2024, Value Discovery tying product features to business KPIs, executive QBRs.
+- Enterprise Account Manager, DrChrono (2019–2021): $2.2M ARR enterprise portfolio, 98% retention, 17% over quota. President's Club 2020.
+- Clinical Training Specialist II, MemorialCare (2013–2019): implementation across 15+ acquired practices, trained 500+ clinical and admin users on healthcare platforms.
+- Partner Implementations (Care360), Kareo (2011–2013): end-to-end SaaS implementation for 20+ strategic partners, 80%+ NPS on training.
+
+## How he works
+
+- Lead with the conclusion. Say when it's not a fit. Stay after the signature. Discovery before demo, always.
+- Pre-sales rigor on post-sale accounts: evaluations with teeth, PoCs against the buyer's data, honest qualification. Overselling is churn with extra steps.
+- AI takes the admin; the judgment is the job. Agents draft, humans decide, notice out loud, and own the technical case.
+
+## Tools (free, in the browser, no signup, no data leaves the page)
+
+- [PoC Evaluation Scorecard](https://jfournier.net/tools/poc-scorecard/): eight weighted criteria that score whether a proof of concept is worth running, with framework support (MEDDPICC, BANT, Challenger, SPIN, Sandler, Solution Selling), recommendations, and a copyable AI follow-up prompt.
+- [CSM Renewal Scorecard](https://jfournier.net/tools/renewal-scorecard/): champion dependency, value realized, and technical health, scored to a renew-and-expand / at-risk / churn-risk verdict, with framework support and a copyable AI follow-up prompt.
+- [MCP Readiness Checker](https://jfournier.net/tools/mcp-readiness/): six weighted criteria that score whether an organization is ready to pilot an AI agent connected to real customer data via MCP, with recommendations and a copyable AI follow-up prompt.
+- [Competitive Displacement Scorer](https://jfournier.net/tools/displacement-scorer/): eight weighted criteria that score whether an incumbent can actually be displaced, with framework support, recommendations, and a copyable AI follow-up prompt.
+- [Expansion Readiness Scorer](https://jfournier.net/tools/expansion-scorer/): eight weighted criteria that score whether an existing account is ready to expand, with framework support, recommendations, and a copyable AI follow-up prompt.
+
+## Writing
+
+- [AI is taking the admin. The judgment is the job.](https://jfournier.net/articles/ai-admin-judgment/): AI agents can draft the renewal plan, the QBR, and the save plan. What they cannot do is decide, notice out loud, or own the technical case.

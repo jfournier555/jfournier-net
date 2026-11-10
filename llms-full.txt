@@ -1,0 +1,181 @@
+# Justin Fournier — jfournier.net
+
+## Who this is
+
+Justin Fournier is a Solutions Engineer in Las Vegas with 15+ years across SaaS implementation, customer success, and sales engineering. He goes where technology is hardest for people to use, because that is where the translator is most valuable. He proves what's possible inside accounts you already hold, then turns renewals into expansion. Deep discovery, honest PoCs, demos built around the buyer's actual problem. He doesn't disappear after the signature.
+
+Contact him for: Senior Customer Solutions Engineer, Senior Technical Success Manager, Senior Customer Success Manager, or Technical Account Manager roles. Based in Las Vegas, NV; US remote (PST/MST).
+
+- LinkedIn: https://www.linkedin.com/in/jfournier555/
+- Email: JFournier555@gmail.com
+- GitHub: https://github.com/jfournier555
+- Website: https://jfournier.net/
+
+## What he does
+
+### 01. Technical Discovery and PoCs
+
+Discovery that surfaces the real buying criteria, then evaluations with defined success criteria and executive readouts. No science projects, no shelfware.
+
+### 02. Competitive Displacement
+
+Unseating entrenched incumbents with technical win themes and de-risked migration paths. He makes switching feel inevitable, never scary.
+
+### 03. AI-Augmented Evaluations
+
+He brings AI into the sales cycle itself: live agent workflows run against the customer's own data, so buyers see their future state instead of a slide deck.
+
+### 04. Success and Expansion
+
+A decade in post-sale before pre-sales: onboarding, adoption, QBRs, executive advocacy. $1.56M in expansion in a single fiscal year, growth earned through trust, not pressure.
+
+## How he works
+
+### 01. Lead with the conclusion.
+
+Analysis is proof, not the pitch. If it doesn't fit in one sentence, it's not ready to say out loud.
+
+### 02. Say when it's not a fit.
+
+He'll talk a buyer out of the wrong purchase. Trust compounds; oversold deals just churn later.
+
+### 03. Stay after the signature.
+
+Most SEs vanish at close. Most CSMs never saw the technical win. He was in the room for both: the evaluation, the fix, and the renewal.
+
+### 04. Discovery before demo. Always.
+
+No generic walkthroughs. He earns the right to show product by understanding the problem first.
+
+## Proof
+
+- $4.76M: enterprise ARR book managed
+- $1.56M: expansion revenue, single fiscal year
+- 118%: net revenue retention on H1 finalized deals
+- 15+ years across SaaS implementation, customer success, and sales engineering
+
+Additional numbers: $1.1M+ pipeline influenced, $281K+ closed-won (including a $142K expansion), $450K+ open pipeline supported. H1 finalized renewals $793K, closed $756K (about 95% gross retention) plus $181K expansions, which is the 118% net retention on finalized H1 deals.
+
+## Background
+
+### Customer Solutions Engineer — FullStory (Jul 2026–present)
+
+Post-sale technical partner for enterprise accounts: technical discovery, expansion PoCs, competitive displacement plays, and AI-agent workflow sessions with customer engineering teams. Also break-fix support, and the technical case on every renewal.
+
+### Principal Customer Success Manager — FullStory (2021–Jun 2026)
+
+$4.76M ARR enterprise book. $1.56M expansion in FY2024. Value Discovery work tying product features to business KPIs; led executive QBRs.
+
+### Enterprise Account Manager — DrChrono (2019–2021)
+
+$2.2M ARR enterprise portfolio, 98% retention, 17% over quota. President's Club 2020. Retention and expansion were the same job: when the product worked for the people who bought it, the renewal followed, and the expansion followed the renewal.
+
+### Clinical Training Specialist II — MemorialCare (2013–2019)
+
+Led implementation across 15+ acquired practices and trained 500+ clinical and admin users on healthcare platforms. The job was making a platform the staff didn't choose work for the people who had to use it every day.
+
+### Partner Implementations, Care360 — Kareo (2011–2013)
+
+End-to-end SaaS implementation for 20+ strategic partners on Care360. 80%+ NPS on training. The partners were the customer: if their teams couldn't run it, the implementation hadn't worked, no matter what the project plan said.
+
+## Tools
+
+Five free tools from the way he works. Free, in the browser, no signup, no data leaves the page. Each scores an assessment, gives specific recommendations on what to do next, and generates a copyable prompt to paste into your own LLM for follow-up. The four sales tools support MEDDPICC, BANT, Challenger, SPIN, Sandler, and Solution Selling through a framework dropdown, which adds two framework questions, framework tags and tips on the criteria, and a framework-specific first step in the plan.
+
+### PoC Evaluation Scorecard — https://jfournier.net/tools/poc-scorecard/
+
+Eight weighted criteria, scored 0 (no), 1 (partial), 2 (yes): problem clarity (x2), success criteria (x3), buyer data access (x2), technical fit (x2), economic buyer (x2), exit criteria (x2), decision process (x2), timeline (x2). Maximum weighted score 34, or 38 with a framework active.
+
+Verdicts: 80% or higher, "Run it." 50–79%, "Fix these gaps first." Below 50%, "Walk away."
+
+Four red flags, any one of which overrides the score to "Walk away.": no success criteria and no one will define them; no access to real buyer data; no economic buyer and no path to one; the "evaluation" is really a free consulting project.
+
+Thesis: an evaluation without defined success criteria is a science project. Qualification is the job, not the obstacle.
+
+### CSM Renewal Scorecard — https://jfournier.net/tools/renewal-scorecard/
+
+Section A, Champion dependency (after Kelly M.'s Champion Dependency Score): five yes/no questions where Yes means single-person dependency — the champion introduced the team, runs training, handles invoices and renewals, is the first call on issues, attends the QBRs. Dependency is yes/5. Bands: 0–20% survive a departure; 21–50% some risk; 51–80% high risk, widen relationships now; 81–100% crisis mode.
+
+Section B, Value realized (after Markus Rentsch's Customer Value-Led Growth): seven steps scored 0/1/2 — goals decoded, roadmap, quick wins, measured, demonstrated, growth identified, executive sponsorship. Maximum 14.
+
+Section C, Technical health: five criteria scored 0/1/2 — it works; adoption is deep; support load is normal; usage stable or growing; the renewal decision process is mapped (who signs, by when). Maximum 10.
+
+Section D, Framework lens (only when a framework is selected): the two shared framework questions, scored 0/1/2, maximum 4, banded like Sections B and C.
+
+Overall verdict is governed by the worst section: any section bad (dependency 81–100%, or B/C/D below 40%) means "Churn risk — escalate now." Any section warn (dependency 51–80%, or B/C/D 40–69%) means "At risk." Otherwise, "Safe — renew and expand."
+
+Thesis: renewals and expansion are the logical consequence of delivered value, not talk. A single-threaded account has no champion, it has a point of failure.
+
+### MCP Readiness Checker — https://jfournier.net/tools/mcp-readiness/
+
+Six weighted criteria, scored 0/1/2: use cases defined (x3), data access (x2), MCP/API surface (x2), governance (x2), internal champion (x2), success criteria (x2). Maximum weighted score 26. No framework dropdown; this is not a sales motion.
+
+Verdicts: 80% or higher, "Ready to pilot." 50–79%, "Fix these gaps first." Below 50%, "Not yet."
+
+Four red flags, any one of which overrides the score to "Not yet.": no named use case (just "we should do AI"); the agent would need credentials or data it shouldn't have; no one inside owns it or can approve the next step; feeding the agent screenshots because there's no API or MCP access.
+
+Note on FullStory: the public MCP server is available to all paying customers, on by default; an admin enables it under Settings > Account Management > StoryAI Features; it requires StoryAI enabled. No separate MCP SKU. The free tier does not get it.
+
+Thesis: the wiring is the job. If a company cannot give an agent clean data access with real governance, it does not have an engine. It has a demo.
+
+### Competitive Displacement Scorer — https://jfournier.net/tools/displacement-scorer/
+
+Eight weighted criteria, scored 0/1/2: workflow dependency (x3), integration depth (x2), incumbent gaps (x2), switching cost (x2), champion plus economic buyer (x2), proof against their data (x2), decision process (x2), budget (x2). Maximum weighted score 34, or 38 with a framework active.
+
+Verdicts: 80% or higher, "Displace now." 50–79%, "Build the wedge first." Below 50%, "Don't bother."
+
+Four red flags, any one of which overrides the score to "Don't bother.": the incumbent is "good enough" and nobody inside feels pain; no champion (only an evaluator with no pull); the "displacement" is really a rip-and-replace with no migration path; competing on features, not on the workflow the buyer lives in.
+
+Thesis: don't try to kill the incumbent. Become load-bearing next to it, then make switching feel inevitable.
+
+### Expansion Readiness Scorer — https://jfournier.net/tools/expansion-scorer/
+
+Eight weighted criteria, scored 0/1/2: value demonstrated (x3), usage gaps (x2), adoption depth (x2), stakeholder coverage (x2), commercial signals (x2), business case (x2), decision process (x2), budget (x2). Maximum weighted score 34, or 38 with a framework active.
+
+Verdicts: 80% or higher, "Expand now." 50–79%, "Fix these gaps first." Below 50%, "Not yet."
+
+Four red flags, any one of which overrides the score to "Not yet.": no demonstrated value; the account is at risk (renewal first); the "expansion" is shelfware they already own and don't use; no economic buyer in the loop.
+
+Thesis: an at-risk account doesn't expand, it churns. The renewal case comes first.
+
+## Writing
+
+### AI is taking the admin. The judgment is the job. — https://jfournier.net/articles/ai-admin-judgment/
+
+I saw a post making the rounds this week. An entire customer success engine, eight AI agents, copy the whole setup in ten minutes. A router in front, a Notion board behind it, and you just approve the drafts and show up for the conversations that matter.
+
+It is a seductive promise. And it is half true.
+
+The half that is true is the admin. Watching every account for signs it is going quiet. Walking into every call with the full history. Getting new customers to first value before they stall. Having the QBR, the renewal plan, and the reference ask ready on time. That is a full time job before anyone answers a single ticket, and an agent can draft all of it. The eight jobs in that post are the right eight jobs. I would build the same eight.
+
+The half that is false is the ten minutes.
+
+The wiring is the job. Connecting the CRM, the usage data, the tickets, and the chats. Permissions on who can see what. Governance on what the agent is allowed to touch. A router that decides what needs a human is easy to draw on a diagram and hard to get right in a real company, because the hard part was never the agent. The hard part is the access. If your company cannot give an agent clean data access with real governance, you do not have an engine. You have a demo. This is why I built a readiness checker before I would build anything else. Score that first.
+
+Here is the story that convinced me.
+
+An analyst on a customer team asked one sharp question against real customer data. Thirty minutes later, he had found a payment defect that had been live for weeks. Book clicks, then an error, then the cart dumping people back to the home page. Nobody had seen it, because nobody had asked the question that way.
+
+The agent did not know what to ask. The human did.
+
+That is the whole argument, and the data backs it up. ChurnZero's 2026 study found 81 percent of CS teams say AI reduced their manual work. But half of them have no consistent way to measure its impact, and only 21 percent of CS leaders connect AI measurement to revenue outcomes. TSIA says copilots reclaim 30 to 40 percent of the time CSMs spend on admin. The admin is going away. The question is what fills the hours it frees.
+
+Three things I have learned, and I am still learning them:
+
+1. The draft is not the decision. An agent can draft the renewal plan and the save plan and the QBR. Approval is not a rubber stamp, it is the job. You are not approving grammar. You are deciding whether the plan is right, whether the account is actually at risk, whether the number in the deck is real. If you approve everything, you did not build an engine. You built a laundering machine for decisions you stopped making.
+
+2. Noticing is worthless unless you say it out loud. An agent can flag the account going quiet. It can flag the champion who stopped answering after the reorg. It cannot walk into the room and say the sentence. A "we're fine" that is not fine, a sponsor who went silent, a renewal that is drifting. Someone has to say it, once, clearly, at the moment it matters. That is not admin. That is judgment, and it is the part no agent will do for you.
+
+3. The technical case is the job. A renewal is won or lost on whether the product works. An expansion only happens when the value is demonstrated and the account is healthy. No agent owns that case. You do. You are the one who can look at the data and say, this is not a churn risk, this is a defect, or this is not an expansion, this is a save wearing an expansion's clothes. The agent gives you the brief. You give the customer the answer.
+
+So what do you do with the hours the admin gives back?
+
+Learn the product cold. Run the hard conversations. Ask the questions no agent knows to ask. The admin was never the job, it was the tax on the job, and the tax is going away.
+
+The agents are coming for the admin work. Let them have it. The job was never the paperwork. The job is the judgment, and that part is still yours.
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/jfournier555/
+- Email: JFournier555@gmail.com
+- GitHub: https://github.com/jfournier555
