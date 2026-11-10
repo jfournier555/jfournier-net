@@ -1,4 +1,4 @@
-/* Renewal Save Playbook — scoring logic.
+/* Renewal Save Playbook: scoring logic.
    Pure functions at the top (testable in node); DOM wiring below.
    Diagnostic weights: real reason x3, everything else x2. Max weighted score 18.
    The plan is a 30-day spine; the selected situation prepends its own first step. */
@@ -116,7 +116,7 @@ var PLANS = {
 
 var VERDICT_WORDS = { good: 'Saveable, move now', warn: 'Saveable, but thin', bad: 'This is a churn, not a save' };
 
-/* answers: {reason:0|1|2, second:0|1|2, value:0|1|2, decision:0|1|2} — missing keys count as unanswered.
+/* answers: {reason:0|1|2, second:0|1|2, value:0|1|2, decision:0|1|2}: missing keys count as unanswered.
    flags: {noRealReason:bool, onlyRelationshipLeft:bool, signedCompetitor:bool}
    situation: one of the SITUATIONS keys, or null/undefined. */
 function scoreSave(answers, flags, situation) {

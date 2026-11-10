@@ -29,7 +29,7 @@
 
 ## Background
 
-- Customer Solutions Engineer, FullStory (Jul 2026–present): post-sale technical partner for enterprise accounts — technical discovery, expansion PoCs, competitive displacement, AI-agent workflow sessions with customer engineering teams. Also break-fix support and the technical case on every renewal.
+- Customer Solutions Engineer, FullStory (Jul 2026–present): post-sale technical partner for enterprise accounts: technical discovery, expansion PoCs, competitive displacement, AI-agent workflow sessions with customer engineering teams. Also break-fix support and the technical case on every renewal.
 - Principal Customer Success Manager, FullStory (2021–Jun 2026): $4.76M ARR enterprise book, $1.56M expansion in FY2024, Value Discovery tying product features to business KPIs, executive QBRs.
 - Enterprise Account Manager, DrChrono (2019–2021): $2.2M ARR enterprise portfolio, 98% retention, 17% over quota. President's Club 2020.
 - Clinical Training Specialist II, MemorialCare (2013–2019): implementation across 15+ acquired practices, trained 500+ clinical and admin users on healthcare platforms.

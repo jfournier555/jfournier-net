@@ -1,4 +1,4 @@
-/* Champion Departure Playbook — scoring logic.
+/* Champion Departure Playbook: scoring logic.
    Pure functions at the top (testable in node); DOM wiring below.
    Weights: second relationship x3, everything else x2. Max weighted score 18.
    No framework dropdown: this is a rebuild, not a sales motion. */
@@ -107,7 +107,7 @@ var SITUATIONS = {
 
 var VERDICT_WORDS = { good: 'Rebuildable, move now', warn: 'Rebuildable, but thin', bad: 'Too late to rebuild, protect the exit' };
 
-/* answers: {second:0|1|2, successor:0|1|2, ...} — missing keys count as unanswered.
+/* answers: {second:0|1|2, successor:0|1|2, ...}: missing keys count as unanswered.
    flags: {'only-30':bool, 'competitor-in':bool, 'no-meeting':bool}
    situationKey: one of the SITUATIONS keys, or null. */
 function scoreChampion(answers, flags, situationKey) {

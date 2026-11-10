@@ -1,4 +1,4 @@
-/* Competitive Displacement Scorer — scoring logic (v2).
+/* Competitive Displacement Scorer: scoring logic (v2).
    Pure functions at the top (testable in node); DOM wiring below.
    Weights: workflow dependency x3, everything else x2. Base max 34 (8 criteria).
    Framework bonus questions add 2 x weight 1 (max 4) when a framework is active. */
@@ -55,7 +55,7 @@ var CRITERIA = [
 
 var FLAGS = {
   goodEnough: 'The incumbent is "good enough" and nobody inside feels pain',
-  noChampion: 'No champion — talking to an evaluator with no pull',
+  noChampion: 'No champion: talking to an evaluator with no pull',
   ripReplace: 'The "displacement" is really a rip-and-replace with no migration path',
   features: 'Competing on features, not on the workflow the buyer lives in'
 };
@@ -93,9 +93,9 @@ var FW_PLAN_STEPS = {
 
 var VERDICT_WORDS = { good: 'Displace now', warn: 'Build the wedge first', bad: "Don't bother" };
 
-/* answers: {dependency:0|1|2, ...} — missing keys count as unanswered.
+/* answers: {dependency:0|1|2, ...}: missing keys count as unanswered.
    flags: {goodEnough:bool, ...}
-   bonusAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
+   bonusAnswers: {fw-champion:0|1|2, ...}: only when a framework is active.
    bonusDefs: [{key, label, weight, rec0, rec1}] from V2.bonusQuestions(framework). */
 function scoreDisplacement(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var max = 0, got = 0, answered = 0, fixes = [];
@@ -126,7 +126,7 @@ function scoreDisplacement(answers, flags, bonusAnswers, bonusDefs, frameworkKey
   var verdict, body;
   if (hitFlags.length > 0) {
     verdict = 'bad';
-    body = "Don't bother. A red flag overrides the score — this is not a displacement, it is a feature comparison the incumbent wins. Build the wedge first, or walk away from this one.";
+    body = "Don't bother. A red flag overrides the score. This is not a displacement, it is a feature comparison the incumbent wins. Build the wedge first, or walk away from this one.";
   } else if (answered < total) {
     verdict = 'idle';
     body = (bonusTotal > 0 && answered >= CRITERIA.length)
@@ -137,7 +137,7 @@ function scoreDisplacement(answers, flags, bonusAnswers, bonusDefs, frameworkKey
     body = 'Displace now. The buyer depends on your workflows, the incumbent has gaps they feel, the switching cost is accepted, and the proof is against their data. That is a real displacement.';
   } else if (pct >= 50) {
     verdict = 'warn';
-    body = 'Build the wedge first. Do not lead with displacement — lead with the workflow the buyer cannot live without. Get the missing pieces in place, then run the displacement.';
+    body = 'Build the wedge first. Do not lead with displacement. Lead with the workflow the buyer cannot live without. Get the missing pieces in place, then run the displacement.';
   } else {
     verdict = 'bad';
     body = "Don't bother. The fundamentals are not there: no dependency, no felt pain, or no buyer at the table. A head-on displacement here just burns credibility.";

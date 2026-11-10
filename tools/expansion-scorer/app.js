@@ -1,4 +1,4 @@
-/* Expansion Readiness Scorer — scoring logic (v2).
+/* Expansion Readiness Scorer: scoring logic (v2).
    Pure functions at the top (testable in node); DOM wiring below.
    Weights: value demonstrated x3, everything else x2. Base max 34 (8 criteria).
    Framework bonus questions add 2 x weight 1 (max 4) when a framework is active. */
@@ -53,8 +53,8 @@ var CRITERIA = [
 ];
 
 var FLAGS = {
-  noValue: 'No demonstrated value — the customer cannot say what it did for them',
-  atRisk: 'The account is at risk — renewal first, expansion later',
+  noValue: 'No demonstrated value: the customer cannot say what it did for them',
+  atRisk: 'The account is at risk: renewal first, expansion later',
   shelfware: 'The "expansion" is shelfware they already own and do not use',
   noBuyer: 'No economic buyer in the loop'
 };
@@ -92,9 +92,9 @@ var FW_PLAN_STEPS = {
 
 var VERDICT_WORDS = { good: 'Expand now', warn: 'Fix these gaps first', bad: 'Not yet' };
 
-/* answers: {value:0|1|2, ...} — missing keys count as unanswered.
+/* answers: {value:0|1|2, ...}: missing keys count as unanswered.
    flags: {noValue:bool, ...}
-   bonusAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
+   bonusAnswers: {fw-champion:0|1|2, ...}: only when a framework is active.
    bonusDefs: [{key, label, weight, rec0, rec1}] from V2.bonusQuestions(framework). */
 function scoreExpansion(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var max = 0, got = 0, answered = 0, fixes = [];
@@ -125,7 +125,7 @@ function scoreExpansion(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var verdict, body;
   if (hitFlags.length > 0) {
     verdict = 'bad';
-    body = "Not yet. A red flag overrides the score — this is not an expansion, it is a renewal save wearing an expansion's clothes. Fix the renewal case first.";
+    body = "Not yet. A red flag overrides the score. This is not an expansion, it is a renewal save wearing an expansion's clothes. Fix the renewal case first.";
   } else if (answered < total) {
     verdict = 'idle';
     body = (bonusTotal > 0 && answered >= CRITERIA.length)
@@ -136,7 +136,7 @@ function scoreExpansion(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
     body = 'Expand now. The value is demonstrated, adoption is deep, the buyers are in the loop, and the business case has a number on it. That is a real expansion.';
   } else if (pct >= 50) {
     verdict = 'warn';
-    body = 'Fix these gaps first. Do not pitch the expansion until the value is demonstrated and the account is healthy — otherwise the conversation turns into a discount conversation.';
+    body = 'Fix these gaps first. Do not pitch the expansion until the value is demonstrated and the account is healthy, otherwise the conversation turns into a discount conversation.';
   } else {
     verdict = 'bad';
     body = 'Not yet. The fundamentals are not there: no demonstrated value, thin adoption, or no buyer in the loop. An expansion here just teaches the customer to ask for a cheaper price.';

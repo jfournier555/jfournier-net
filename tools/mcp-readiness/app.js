@@ -1,4 +1,4 @@
-/* MCP Readiness Checker — scoring logic (v2).
+/* MCP Readiness Checker: scoring logic (v2).
    Pure functions at the top (testable in node); DOM wiring below.
    Weights: use cases x3, everything else x2. Max weighted score 26.
    No framework dropdown: this is not a sales motion. */
@@ -55,7 +55,7 @@ var PLANS = {
 
 var VERDICT_WORDS = { good: 'Ready to pilot', warn: 'Fix these gaps first', bad: 'Not yet' };
 
-/* answers: {usecases:0|1|2, data:0|1|2, ...} — missing keys count as unanswered.
+/* answers: {usecases:0|1|2, data:0|1|2, ...}: missing keys count as unanswered.
    flags: {noUseCase:bool, badAccess:bool, noOwner:bool, screenshots:bool} */
 function scoreMcp(answers, flags) {
   var max = 0, got = 0, answered = 0, fixes = [];
@@ -74,7 +74,7 @@ function scoreMcp(answers, flags) {
   var verdict, body;
   if (hitFlags.length > 0) {
     verdict = 'bad';
-    body = 'Not yet. A red flag overrides the score — this is not a pilot, it is a wish. Fix the flag first: name the use case, scope the access, or find the owner.';
+    body = 'Not yet. A red flag overrides the score. This is not a pilot, it is a wish. Fix the flag first: name the use case, scope the access, or find the owner.';
   } else if (answered < CRITERIA.length) {
     verdict = 'idle';
     body = 'Score the remaining criteria to get a verdict.';
@@ -83,7 +83,7 @@ function scoreMcp(answers, flags) {
     body = 'Ready to pilot. The question is sharp, the data is reachable, access is governed, and someone owns the next step. Run one use case, measure it, then decide.';
   } else if (pct >= 50) {
     verdict = 'warn';
-    body = 'Fix these gaps first. Do not start a pilot that cannot answer its own question — get the missing pieces agreed, then run it.';
+    body = 'Fix these gaps first. Do not start a pilot that cannot answer its own question: get the missing pieces agreed, then run it.';
   } else {
     verdict = 'bad';
     body = 'Not yet. The fundamentals are not there: no named use case, no reachable data, or no one to own it. An agent with nothing to do is a demo that goes nowhere.';

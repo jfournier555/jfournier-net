@@ -1,4 +1,4 @@
-/* PoC Evaluation Scorecard — scoring logic (v2).
+/* PoC Evaluation Scorecard: scoring logic (v2).
    Pure functions at the top (testable in node); DOM wiring below.
    Weights: success criteria x3, everything else x2. Base max 34 (8 criteria).
    Framework bonus questions add 2 x weight 1 (max 4) when a framework is active. */
@@ -94,9 +94,9 @@ var FW_PLAN_STEPS = {
 
 var VERDICT_WORDS = { good: 'Run it', warn: 'Fix these gaps first', bad: 'Walk away' };
 
-/* answers: {problem:0|1|2, ...} — missing keys count as unanswered.
+/* answers: {problem:0|1|2, ...}: missing keys count as unanswered.
    flags: {noCriteria:bool, ...}
-   bonusAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
+   bonusAnswers: {fw-champion:0|1|2, ...}: only when a framework is active.
    bonusDefs: [{key, label, weight, rec0, rec1}] from V2.bonusQuestions(framework). */
 function scorePoc(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var max = 0, got = 0, answered = 0, fixes = [];
@@ -127,7 +127,7 @@ function scorePoc(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var verdict, body;
   if (hitFlags.length > 0) {
     verdict = 'bad';
-    body = 'Walk away. A red flag overrides the score — this is not an evaluation. Say so early and spend the time on a deal that can actually close.';
+    body = 'Walk away. A red flag overrides the score. This is not an evaluation. Say so early and spend the time on a deal that can actually close.';
   } else if (answered < total) {
     verdict = 'idle';
     body = (bonusTotal > 0 && answered >= CRITERIA.length)
@@ -138,7 +138,7 @@ function scorePoc(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
     body = 'Run it. The evaluation has a defined problem, agreed success criteria, and a decision at the end. That is a real PoC.';
   } else if (pct >= 50) {
     verdict = 'warn';
-    body = 'Fix these gaps first. Do not start the clock on an evaluation that cannot pass — get the missing pieces agreed in writing, then run it.';
+    body = 'Fix these gaps first. Do not start the clock on an evaluation that cannot pass: get the missing pieces agreed in writing, then run it.';
   } else {
     verdict = 'bad';
     body = 'Walk away. The fundamentals are not there: no clear problem, no agreed success, or no buyer at the table. A forced evaluation just churns later.';

@@ -1,4 +1,4 @@
-/* CSM Renewal Scorecard — scoring logic (v2).
+/* CSM Renewal Scorecard: scoring logic (v2).
    Pure functions at the top (testable in node); DOM wiring below.
    Worst section governs the verdict. Section D (framework lens) appears
    when a framework is selected and counts as a fourth section. */
@@ -122,8 +122,8 @@ var FW_PLAN_STEPS = {
 var VERDICT_WORDS = { good: 'Safe, renew and expand', warn: 'At risk', bad: 'Churn risk, escalate now' };
 
 function depBand(pct) {
-  if (pct >= 81) return { band: 'bad', label: 'Crisis mode — one change away from churn' };
-  if (pct >= 51) return { band: 'warn', label: 'High risk — widen relationships now' };
+  if (pct >= 81) return { band: 'bad', label: 'Crisis mode: one change away from churn' };
+  if (pct >= 51) return { band: 'warn', label: 'High risk: widen relationships now' };
   if (pct >= 21) return { band: 'warn', label: 'Some risk, manageable' };
   return { band: 'good', label: 'We can survive a departure' };
 }
@@ -134,9 +134,9 @@ function sectionBand(pct) {
   return 'good';
 }
 
-/* dep: {intro:bool, ...} — true where a single person owns it.
-   value/health: {goals:0|1|2, ...} — missing keys count as unanswered.
-   fwAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
+/* dep: {intro:bool, ...}: true where a single person owns it.
+   value/health: {goals:0|1|2, ...}: missing keys count as unanswered.
+   fwAnswers: {fw-champion:0|1|2, ...}: only when a framework is active.
    fwDefs: [{key, label, rec0, rec1}] from V2.bonusQuestions(framework). */
 function scoreRenewal(dep, value, health, fwAnswers, fwDefs, frameworkKey) {
   var depYes = 0, depAnswered = 0;
@@ -182,13 +182,13 @@ function scoreRenewal(dep, value, health, fwAnswers, fwDefs, frameworkKey) {
     body = 'Score all sections to get a verdict. The worst section governs.';
   } else if (worst === 'bad') {
     verdict = 'bad';
-    body = 'Churn risk — escalate now. At least one section is in the red: the relationship is single-threaded, the value is invisible, or the product is the problem. Fix that section first; no renewal conversation saves an account in this state.';
+    body = 'Churn risk, escalate now. At least one section is in the red: the relationship is single-threaded, the value is invisible, or the product is the problem. Fix that section first; no renewal conversation saves an account in this state.';
   } else if (worst === 'warn') {
     verdict = 'warn';
-    body = 'At risk — fix these before the renewal conversation. The account renews, but only if the gaps below get closed. Widen the relationships, demonstrate the value, or fix the product — whichever section is yellow.';
+    body = 'At risk, fix these before the renewal conversation. The account renews, but only if the gaps below get closed. Widen the relationships, demonstrate the value, or fix the product, whichever section is yellow.';
   } else {
     verdict = 'good';
-    body = 'Safe — renew and expand. The relationship is broad, the value is visible and measured, and the product works. This is the account to grow, not just keep.';
+    body = 'Safe, renew and expand. The relationship is broad, the value is visible and measured, and the product works. This is the account to grow, not just keep.';
   }
 
   var fixes = [], improvements = [];
@@ -340,7 +340,7 @@ if (typeof document !== 'undefined') {
     bodyEl.textContent = r.body;
 
     if (r.answered > 0) {
-      sDep.textContent = r.depPct + '% — ' + r.depLabel;
+      sDep.textContent = r.depPct + '% · ' + r.depLabel;
       sVal.textContent = r.valuePct + '%';
       sHealth.textContent = r.healthPct + '%';
       if (defs.length > 0) {

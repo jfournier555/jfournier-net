@@ -59,23 +59,23 @@ Additional numbers: $1.1M+ pipeline influenced, $281K+ closed-won (including a $
 
 ## Background
 
-### Customer Solutions Engineer — FullStory (Jul 2026–present)
+### Customer Solutions Engineer, FullStory (Jul 2026–present)
 
 Post-sale technical partner for enterprise accounts: technical discovery, expansion PoCs, competitive displacement plays, and AI-agent workflow sessions with customer engineering teams. Also break-fix support, and the technical case on every renewal.
 
-### Principal Customer Success Manager — FullStory (2021–Jun 2026)
+### Principal Customer Success Manager, FullStory (2021–Jun 2026)
 
 $4.76M ARR enterprise book. $1.56M expansion in FY2024. Value Discovery work tying product features to business KPIs; led executive QBRs.
 
-### Enterprise Account Manager — DrChrono (2019–2021)
+### Enterprise Account Manager, DrChrono (2019–2021)
 
 $2.2M ARR enterprise portfolio, 98% retention, 17% over quota. President's Club 2020. Retention and expansion were the same job: when the product worked for the people who bought it, the renewal followed, and the expansion followed the renewal.
 
-### Clinical Training Specialist II — MemorialCare (2013–2019)
+### Clinical Training Specialist II, MemorialCare (2013–2019)
 
 Led implementation across 15+ acquired practices and trained 500+ clinical and admin users on healthcare platforms. The job was making a platform the staff didn't choose work for the people who had to use it every day.
 
-### Partner Implementations, Care360 — Kareo (2011–2013)
+### Partner Implementations (Care360), Kareo (2011–2013)
 
 End-to-end SaaS implementation for 20+ strategic partners on Care360. 80%+ NPS on training. The partners were the customer: if their teams couldn't run it, the implementation hadn't worked, no matter what the project plan said.
 
@@ -83,7 +83,7 @@ End-to-end SaaS implementation for 20+ strategic partners on Care360. 80%+ NPS o
 
 Five free tools from the way he works. Free, in the browser, no signup, no data leaves the page. Each scores an assessment, gives specific recommendations on what to do next, and generates a copyable prompt to paste into your own LLM for follow-up. The four sales tools support MEDDPICC, BANT, Challenger, SPIN, Sandler, and Solution Selling through a framework dropdown, which adds two framework questions, framework tags and tips on the criteria, and a framework-specific first step in the plan.
 
-### PoC Evaluation Scorecard — https://jfournier.net/tools/poc-scorecard/
+### PoC Evaluation Scorecard: https://jfournier.net/tools/poc-scorecard/
 
 Eight weighted criteria, scored 0 (no), 1 (partial), 2 (yes): problem clarity (x2), success criteria (x3), buyer data access (x2), technical fit (x2), economic buyer (x2), exit criteria (x2), decision process (x2), timeline (x2). Maximum weighted score 34, or 38 with a framework active.
 
@@ -93,21 +93,21 @@ Four red flags, any one of which overrides the score to "Walk away.": no success
 
 Thesis: an evaluation without defined success criteria is a science project. Qualification is the job, not the obstacle.
 
-### CSM Renewal Scorecard — https://jfournier.net/tools/renewal-scorecard/
+### CSM Renewal Scorecard: https://jfournier.net/tools/renewal-scorecard/
 
-Section A, Champion dependency: five yes/no questions where Yes means single-person dependency — the champion introduced the team, runs training, handles invoices and renewals, is the first call on issues, attends the QBRs. Dependency is yes/5. Bands: 0–20% survive a departure; 21–50% some risk; 51–80% high risk, widen relationships now; 81–100% crisis mode.
+Section A, Champion dependency: five yes/no questions where Yes means single-person dependency: the champion introduced the team, runs training, handles invoices and renewals, is the first call on issues, attends the QBRs. Dependency is yes/5. Bands: 0–20% survive a departure; 21–50% some risk; 51–80% high risk, widen relationships now; 81–100% crisis mode.
 
-Section B, Value realized (after Markus Rentsch's Customer Value-Led Growth): seven steps scored 0/1/2 — goals decoded, roadmap, quick wins, measured, demonstrated, growth identified, executive sponsorship. Maximum 14.
+Section B, Value realized (after Markus Rentsch's Customer Value-Led Growth): seven steps scored 0/1/2: goals decoded, roadmap, quick wins, measured, demonstrated, growth identified, executive sponsorship. Maximum 14.
 
-Section C, Technical health: five criteria scored 0/1/2 — it works; adoption is deep; support load is normal; usage stable or growing; the renewal decision process is mapped (who signs, by when). Maximum 10.
+Section C, Technical health: five criteria scored 0/1/2: it works; adoption is deep; support load is normal; usage stable or growing; the renewal decision process is mapped (who signs, by when). Maximum 10.
 
 Section D, Framework lens (only when a framework is selected): the two shared framework questions, scored 0/1/2, maximum 4, banded like Sections B and C.
 
-Overall verdict is governed by the worst section: any section bad (dependency 81–100%, or B/C/D below 40%) means "Churn risk — escalate now." Any section warn (dependency 51–80%, or B/C/D 40–69%) means "At risk." Otherwise, "Safe — renew and expand."
+Overall verdict is governed by the worst section: any section bad (dependency 81–100%, or B/C/D below 40%) means "Churn risk, escalate now." Any section warn (dependency 51–80%, or B/C/D 40–69%) means "At risk." Otherwise, "Safe, renew and expand."
 
 Thesis: renewals and expansion are the logical consequence of delivered value, not talk. A single-threaded account has no champion, it has a point of failure.
 
-### MCP Readiness Checker — https://jfournier.net/tools/mcp-readiness/
+### MCP Readiness Checker: https://jfournier.net/tools/mcp-readiness/
 
 Six weighted criteria, scored 0/1/2: use cases defined (x3), data access (x2), MCP/API surface (x2), governance (x2), internal champion (x2), success criteria (x2). Maximum weighted score 26. No framework dropdown; this is not a sales motion.
 
@@ -119,7 +119,7 @@ Note on FullStory: the public MCP server is available to all paying customers, o
 
 Thesis: the wiring is the job. If a company cannot give an agent clean data access with real governance, it does not have an engine. It has a demo.
 
-### Competitive Displacement Scorer — https://jfournier.net/tools/displacement-scorer/
+### Competitive Displacement Scorer: https://jfournier.net/tools/displacement-scorer/
 
 Eight weighted criteria, scored 0/1/2: workflow dependency (x3), integration depth (x2), incumbent gaps (x2), switching cost (x2), champion plus economic buyer (x2), proof against their data (x2), decision process (x2), budget (x2). Maximum weighted score 34, or 38 with a framework active.
 
@@ -129,7 +129,7 @@ Four red flags, any one of which overrides the score to "Don't bother.": the inc
 
 Thesis: don't try to kill the incumbent. Become load-bearing next to it, then make switching feel inevitable.
 
-### Expansion Readiness Scorer — https://jfournier.net/tools/expansion-scorer/
+### Expansion Readiness Scorer: https://jfournier.net/tools/expansion-scorer/
 
 Eight weighted criteria, scored 0/1/2: value demonstrated (x3), usage gaps (x2), adoption depth (x2), stakeholder coverage (x2), commercial signals (x2), business case (x2), decision process (x2), budget (x2). Maximum weighted score 34, or 38 with a framework active.
 
@@ -143,7 +143,7 @@ Thesis: an at-risk account doesn't expand, it churns. The renewal case comes fir
 
 Scorecards diagnose; playbooks are the fix. Three playbooks for the moments that decide a renewal. Each takes a situation, scores a four-question diagnostic, and hands you a sequenced plan, the message to send, and five sharp questions.
 
-### Renewal Save Playbook — https://jfournier.net/tools/renewal-save-playbook/
+### Renewal Save Playbook: https://jfournier.net/tools/renewal-save-playbook/
 
 Five situations: champion left; usage dropped; sponsor gone silent; budget cut; competitor in the account. Four diagnostic criteria, scored 0/1/2: real reason known (x3), second relationship (x2), value demonstrated in the customer's own numbers (x2), decision process mapped (x2). Maximum weighted score 18.
 
@@ -155,7 +155,7 @@ The plan is a 30-day spine (diagnose, rebuild the relationship map, prove value 
 
 Thesis: a save is a diagnosis first. Most saves fail because the CSM treats the symptom, the renewal date, instead of the cause.
 
-### Champion Departure Playbook — https://jfournier.net/tools/champion-departure-playbook/
+### Champion Departure Playbook: https://jfournier.net/tools/champion-departure-playbook/
 
 Five situations: champion left, no successor named; champion left, successor named but new; champion was promoted internally; champion left for a competitor; champion left and the renewal is within 90 days. Four diagnostic criteria, scored 0/1/2: second relationship in the account (x3), the successor is known (x2), value is documented (x2), renewal date and decision process known (x2). Maximum weighted score 18.
 
@@ -167,7 +167,7 @@ The plan is a 7/14/30-day rebuild spine with a situation-specific first step pre
 
 Thesis: the champion leaving is the highest-stakes event in post-sales. The rebuild is 7/14/30 days, and the first week decides whether the account survives.
 
-### Onboarding Time-to-Value Playbook — https://jfournier.net/tools/onboarding-playbook/
+### Onboarding Time-to-Value Playbook: https://jfournier.net/tools/onboarding-playbook/
 
 Five situations: new customer, first rollout; new team on an existing account; new use case on an existing account; re-onboarding after a failed rollout; executive sponsor changed during onboarding. Four diagnostic criteria, scored 0/1/2: first value defined (x3), named owner on the customer side (x2), 30/60-day plan agreed, with dates (x2), usage measured, not just "training complete" (x2). Maximum weighted score 18.
 
@@ -181,7 +181,7 @@ Thesis: onboarding speed is the number one leading indicator of NRR. First value
 
 ## Writing
 
-### AI is taking the admin. The judgment is the job. — https://jfournier.net/articles/ai-admin-judgment/
+### AI is taking the admin. The judgment is the job. https://jfournier.net/articles/ai-admin-judgment/
 
 I saw a post making the rounds this week. An entire customer success engine, eight AI agents, copy the whole setup in ten minutes. A router in front, a Notion board behind it, and you just approve the drafts and show up for the conversations that matter.
 

@@ -1,4 +1,4 @@
-/* Onboarding Time-to-Value Playbook — scoring logic.
+/* Onboarding Time-to-Value Playbook: scoring logic.
    Pure functions at the top (testable in node); DOM wiring below.
    Diagnostic: first value x3, everything else x2. Max weighted score 18.
    No framework dropdown: this is not a sales motion. The playbook changes
@@ -93,7 +93,7 @@ function situationByKey(key) {
   return found;
 }
 
-/* answers: {firstvalue:0|1|2, owner:0|1|2, plan:0|1|2, usage:0|1|2} — missing keys count as unanswered.
+/* answers: {firstvalue:0|1|2, owner:0|1|2, plan:0|1|2, usage:0|1|2}: missing keys count as unanswered.
    flags: {noOwner:bool, trainingOnly:bool, sponsorGone:bool}
    situationKey: one of SITUATIONS keys, or null/undefined when not picked. */
 function scoreOnboarding(answers, flags, situationKey) {
