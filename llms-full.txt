@@ -81,7 +81,7 @@ End-to-end SaaS implementation for 20+ strategic partners on Care360. 80%+ NPS o
 
 ## Tools
 
-Five free tools from the way he works. Free, in the browser, no signup, no data leaves the page. Each scores an assessment, gives specific recommendations on what to do next, and generates a copyable prompt to paste into your own LLM for follow-up. The four sales tools support MEDDPICC, BANT, Challenger, SPIN, Sandler, and Solution Selling through a framework dropdown, which adds two framework questions, framework tags and tips on the criteria, and a framework-specific first step in the plan.
+Four free tools from the way he works. Free, in the browser, no signup, no data leaves the page. Each scores an assessment, gives specific recommendations on what to do next, and generates a copyable prompt to paste into your own LLM for follow-up. The four sales tools support MEDDPICC, BANT, Challenger, SPIN, Sandler, and Solution Selling through a framework dropdown, which adds two framework questions, framework tags and tips on the criteria, and a framework-specific first step in the plan.
 
 ### PoC Evaluation Scorecard: https://jfournier.net/tools/poc-scorecard/
 
@@ -106,18 +106,6 @@ Section D, Framework lens (only when a framework is selected): the two shared fr
 Overall verdict is governed by the worst section: any section bad (dependency 81–100%, or B/C/D below 40%) means "Churn risk, escalate now." Any section warn (dependency 51–80%, or B/C/D 40–69%) means "At risk." Otherwise, "Safe, renew and expand."
 
 Thesis: renewals and expansion are the logical consequence of delivered value, not talk. A single-threaded account has no champion, it has a point of failure.
-
-### MCP Readiness Checker: https://jfournier.net/tools/mcp-readiness/
-
-Six weighted criteria, scored 0/1/2: use cases defined (x3), data access (x2), MCP/API surface (x2), governance (x2), internal champion (x2), success criteria (x2). Maximum weighted score 26. No framework dropdown; this is not a sales motion.
-
-Verdicts: 80% or higher, "Ready to pilot." 50–79%, "Fix these gaps first." Below 50%, "Not yet."
-
-Four red flags, any one of which overrides the score to "Not yet.": no named use case (just "we should do AI"); the agent would need credentials or data it shouldn't have; no one inside owns it or can approve the next step; feeding the agent screenshots because there's no API or MCP access.
-
-Note on FullStory: the public MCP server is available to all paying customers, on by default; an admin enables it under Settings > Account Management > StoryAI Features; it requires StoryAI enabled. No separate MCP SKU. The free tier does not get it.
-
-Thesis: the wiring is the job. If a company cannot give an agent clean data access with real governance, it does not have an engine. It has a demo.
 
 ### Competitive Displacement Scorer: https://jfournier.net/tools/displacement-scorer/
 
@@ -214,6 +202,8 @@ So what do you do with the hours the admin gives back?
 Learn the product cold. Run the hard conversations. Ask the questions no agent knows to ask. The admin was never the job, it was the tax on the job, and the tax is going away.
 
 The agents are coming for the admin work. Let them have it. The job was never the paperwork. The job is the judgment, and that part is still yours.
+
+Companion tool: MCP Readiness Checker (https://jfournier.net/tools/mcp-readiness/): six weighted criteria that score whether an organization is ready to pilot an AI agent connected to real customer data via MCP. Verdicts: 80% or higher, "Ready to pilot." 50–79%, "Fix these gaps first." Below 50%, "Not yet."
 
 ### The booth is a discovery call with worse acoustics. https://jfournier.net/articles/booth-discovery/
 

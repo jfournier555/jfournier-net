@@ -45,7 +45,6 @@
 
 - [PoC Evaluation Scorecard](https://jfournier.net/tools/poc-scorecard/): eight weighted criteria that score whether a proof of concept is worth running, with framework support (MEDDPICC, BANT, Challenger, SPIN, Sandler, Solution Selling), recommendations, and a copyable AI follow-up prompt.
 - [CSM Renewal Scorecard](https://jfournier.net/tools/renewal-scorecard/): champion dependency, value realized, and technical health, scored to a renew-and-expand / at-risk / churn-risk verdict, with framework support and a copyable AI follow-up prompt.
-- [MCP Readiness Checker](https://jfournier.net/tools/mcp-readiness/): six weighted criteria that score whether an organization is ready to pilot an AI agent connected to real customer data via MCP, with recommendations and a copyable AI follow-up prompt.
 - [Competitive Displacement Scorer](https://jfournier.net/tools/displacement-scorer/): eight weighted criteria that score whether an incumbent can actually be displaced, with framework support, recommendations, and a copyable AI follow-up prompt.
 - [Expansion Readiness Scorer](https://jfournier.net/tools/expansion-scorer/): eight weighted criteria that score whether an existing account is ready to expand, with framework support, recommendations, and a copyable AI follow-up prompt.
 
@@ -60,4 +59,5 @@ Scorecards diagnose; playbooks are the fix. Each takes a situation, scores a fou
 ## Writing
 
 - [AI is taking the admin. The judgment is the job.](https://jfournier.net/articles/ai-admin-judgment/): AI agents can draft the renewal plan, the QBR, and the save plan. What they cannot do is decide, notice out loud, or own the technical case.
+- [MCP Readiness Checker](https://jfournier.net/tools/mcp-readiness/) (companion to the article above): six weighted criteria that score whether an organization is ready to pilot an AI agent connected to real customer data via MCP, with recommendations and a copyable AI follow-up prompt.
 - [The booth is a discovery call with worse acoustics.](https://jfournier.net/articles/booth-discovery/): I did not stop people in their tracks by telling them what my software does. I stopped them with "How's Vegas treating ya?" A booth is a discovery call with worse acoustics.
