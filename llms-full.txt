@@ -95,7 +95,7 @@ Thesis: an evaluation without defined success criteria is a science project. Qua
 
 ### CSM Renewal Scorecard — https://jfournier.net/tools/renewal-scorecard/
 
-Section A, Champion dependency (after Kelly M.'s Champion Dependency Score): five yes/no questions where Yes means single-person dependency — the champion introduced the team, runs training, handles invoices and renewals, is the first call on issues, attends the QBRs. Dependency is yes/5. Bands: 0–20% survive a departure; 21–50% some risk; 51–80% high risk, widen relationships now; 81–100% crisis mode.
+Section A, Champion dependency: five yes/no questions where Yes means single-person dependency — the champion introduced the team, runs training, handles invoices and renewals, is the first call on issues, attends the QBRs. Dependency is yes/5. Bands: 0–20% survive a departure; 21–50% some risk; 51–80% high risk, widen relationships now; 81–100% crisis mode.
 
 Section B, Value realized (after Markus Rentsch's Customer Value-Led Growth): seven steps scored 0/1/2 — goals decoded, roadmap, quick wins, measured, demonstrated, growth identified, executive sponsorship. Maximum 14.
 
