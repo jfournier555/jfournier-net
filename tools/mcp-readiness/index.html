@@ -136,6 +136,16 @@
           <h4>Fix first</h4>
           <ul id="fixitems"></ul>
         </div>
+        <div class="plan" id="plan" hidden>
+          <h4>What to do next</h4>
+          <ol id="planitems"></ol>
+        </div>
+        <div class="promptbox" id="promptbox" hidden>
+          <h4>Take this to your AI</h4>
+          <p class="prompt-sub">Copy this prompt into your own LLM to build the fix plan, the message, and the questions for your next step. Nothing leaves this page until you copy it.</p>
+          <textarea id="prompttext" readonly rows="9"></textarea>
+          <div class="actions"><button class="btn" id="copyprompt" type="button">Copy prompt</button></div>
+        </div>
       </div>
       <div class="actions">
         <button class="btn" id="reset" type="button">Reset scores</button>
@@ -156,6 +166,7 @@
     </div>
   </footer>
 </div>
+<script src="../tool-v2.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

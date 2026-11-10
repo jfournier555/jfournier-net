@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSM Renewal Scorecard — Justin Fournier</title>
-<meta name="description" content="Score a renewal on the technical case, not the check-ins. Champion dependency, value realized, and technical health — three sections that say whether an account renews, and what to fix if it won't. Free, in the browser, no data leaves the page.">
+<meta name="description" content="Score a renewal on the technical case, not the check-ins. Champion dependency, value realized, and technical health — three sections that say whether an account renews, and what to fix if it won't. Pick a sales framework to see it in that language, get recommendations, and copy a follow-up prompt for your AI. Free, in the browser, no data leaves the page.">
 <link rel="canonical" href="https://jfournier.net/tools/renewal-scorecard/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%235b9dff' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
@@ -49,10 +49,27 @@
   </header>
 
   <main>
+    <section class="tool-sec" id="framework">
+      <div class="fw-picker">
+        <label for="fw">Sales framework</label>
+        <select id="fw">
+          <option value="general" selected>No framework (general)</option>
+          <option value="meddpicc">MEDDPICC</option>
+          <option value="bant">BANT</option>
+          <option value="challenger">Challenger</option>
+          <option value="spin">SPIN</option>
+          <option value="sandler">Sandler</option>
+          <option value="solution">Solution Selling</option>
+        </select>
+        <p class="fw-sub">Pick a framework to see each section in its language, plus two framework questions in Section D. Section A stays Kelly M.'s Champion Dependency Score, unchanged. Scoring bands don't change.</p>
+      </div>
+    </section>
+
     <section class="tool-sec" id="dependency">
       <div class="sec-label">Section A — Champion dependency</div>
       <div class="sec-title">One person, or a relationship?</div>
       <p class="sec-sub">Answer Yes where a single person owns it. The stronger your champion feels, the more dangerous it is — if they leave, the value leaves with them.</p>
+      <p class="fw-note" id="fw-note-a" hidden></p>
 
       <div class="criterion" data-key="intro">
         <h3>Introduced us</h3>
@@ -165,6 +182,16 @@
           <label><input type="radio" name="growth" value="2"><span>Yes</span></label>
         </div>
       </div>
+
+      <div class="criterion" data-key="sponsor">
+        <h3>Executive sponsorship</h3>
+        <p>An executive sponsor is engaged and sees the value.</p>
+        <div class="opts">
+          <label><input type="radio" name="sponsor" value="0"><span>No</span></label>
+          <label><input type="radio" name="sponsor" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="sponsor" value="2"><span>Yes</span></label>
+        </div>
+      </div>
       <p class="credit">Value steps after Markus Rentsch's Customer Value-Led Growth: decode, operationalize, enable, measure, demonstrate, monetize.</p>
     </section>
 
@@ -212,6 +239,23 @@
           <label><input type="radio" name="usage" value="2"><span>Yes</span></label>
         </div>
       </div>
+
+      <div class="criterion" data-key="decision">
+        <h3>Decision process</h3>
+        <p>The renewal decision process is mapped: who signs, by when.</p>
+        <div class="opts">
+          <label><input type="radio" name="decision" value="0"><span>No</span></label>
+          <label><input type="radio" name="decision" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="decision" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="framework-sec" hidden>
+      <div class="sec-label">Section D — Framework lens</div>
+      <div class="sec-title">Two questions from <span id="fw-name">the framework</span>.</div>
+      <p class="sec-sub">These two questions look at the account through the framework you picked. They count as a fourth section: the worst section still governs.</p>
+      <div id="bonus-items"></div>
     </section>
 
     <section class="tool-sec" id="result">
@@ -223,10 +267,21 @@
           <span>DEPENDENCY <b id="s-dep">—</b></span>
           <span>VALUE <b id="s-val">—</b></span>
           <span>HEALTH <b id="s-health">—</b></span>
+          <span id="s-fw-wrap" hidden>FRAMEWORK <b id="s-fw">—</b></span>
         </div>
         <div class="fixlist" id="fixlist" hidden>
           <h4>Fix first</h4>
           <ul id="fixitems"></ul>
+        </div>
+        <div class="plan" id="plan" hidden>
+          <h4>What to do next</h4>
+          <ol id="planitems"></ol>
+        </div>
+        <div class="promptbox" id="promptbox" hidden>
+          <h4>Take this to your AI</h4>
+          <p class="prompt-sub">Copy this prompt into your own LLM to build the fix plan, the email, and the questions for your next call. Nothing leaves this page until you copy it.</p>
+          <textarea id="prompttext" readonly rows="9"></textarea>
+          <div class="actions"><button class="btn" id="copyprompt" type="button">Copy prompt</button></div>
         </div>
       </div>
       <div class="actions">
@@ -247,6 +302,7 @@
     </div>
   </footer>
 </div>
+<script src="../tool-v2.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

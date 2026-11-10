@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PoC Evaluation Scorecard — Justin Fournier</title>
-<meta name="description" content="Score a proof of concept before you run it. Six weighted criteria and four red flags that separate a real evaluation from a science project. Free, in the browser, no data leaves the page.">
+<meta name="description" content="Score a proof of concept before you run it. Eight weighted criteria and four red flags that separate a real evaluation from a science project. Pick a sales framework to see it in that language, get recommendations, and copy a follow-up prompt for your AI. Free, in the browser, no data leaves the page.">
 <link rel="canonical" href="https://jfournier.net/tools/poc-scorecard/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%235b9dff' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="jfournier.net">
 <meta property="og:title" content="PoC Evaluation Scorecard — Justin Fournier">
-<meta property="og:description" content="Score a proof of concept before you run it. Six weighted criteria and four red flags that separate a real evaluation from a science project.">
+<meta property="og:description" content="Score a proof of concept before you run it. Eight weighted criteria and four red flags that separate a real evaluation from a science project.">
 <meta property="og:url" content="https://jfournier.net/tools/poc-scorecard/">
 <meta property="og:image" content="https://jfournier.net/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PoC Evaluation Scorecard — Justin Fournier">
-<meta name="twitter:description" content="Score a proof of concept before you run it. Six weighted criteria and four red flags that separate a real evaluation from a science project.">
+<meta name="twitter:description" content="Score a proof of concept before you run it. Eight weighted criteria and four red flags that separate a real evaluation from a science project.">
 <meta name="twitter:image" content="https://jfournier.net/og-card.png">
 <script type="application/ld+json">
 {
@@ -51,8 +51,22 @@
   <main>
     <section class="tool-sec" id="criteria">
       <div class="sec-label">The evaluation</div>
-      <div class="sec-title">Six criteria, weighted.</div>
+      <div class="sec-title">Eight criteria, weighted.</div>
       <p class="sec-sub">Success criteria carries the most weight. Everything else is table stakes — without it, there is nothing to evaluate against.</p>
+
+      <div class="fw-picker">
+        <label for="fw">Sales framework</label>
+        <select id="fw">
+          <option value="general" selected>No framework (general)</option>
+          <option value="meddpicc">MEDDPICC</option>
+          <option value="bant">BANT</option>
+          <option value="challenger">Challenger</option>
+          <option value="spin">SPIN</option>
+          <option value="sandler">Sandler</option>
+          <option value="solution">Solution Selling</option>
+        </select>
+        <p class="fw-sub">Pick a framework to see each criterion in its language, plus two framework questions. Scoring weights don't change.</p>
+      </div>
 
       <div class="criterion" data-key="problem" data-weight="2">
         <h3>Problem clarity <span class="w">WEIGHT ×2</span></h3>
@@ -113,6 +127,31 @@
           <label><input type="radio" name="exit" value="2"><span>Yes</span></label>
         </div>
       </div>
+
+      <div class="criterion" data-key="decision" data-weight="2">
+        <h3>Decision process <span class="w">WEIGHT ×2</span></h3>
+        <p>The decision process is mapped: who decides, in what order, by when.</p>
+        <div class="opts">
+          <label><input type="radio" name="decision" value="0"><span>No</span></label>
+          <label><input type="radio" name="decision" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="decision" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="timeline" data-weight="2">
+        <h3>Timeline <span class="w">WEIGHT ×2</span></h3>
+        <p>There is a real timeline with a date, and a cost to slipping it.</p>
+        <div class="opts">
+          <label><input type="radio" name="timeline" value="0"><span>No</span></label>
+          <label><input type="radio" name="timeline" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="timeline" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div id="bonus" hidden>
+        <div class="sec-label" id="bonus-label">Framework questions</div>
+        <div id="bonus-items"></div>
+      </div>
     </section>
 
     <section class="tool-sec" id="flags">
@@ -130,11 +169,21 @@
     <section class="tool-sec" id="result">
       <div class="verdict idle" id="verdict">
         <div class="v-score" id="v-score">—</div>
-        <div class="v-title" id="v-title">Score the six criteria above.</div>
+        <div class="v-title" id="v-title">Score the eight criteria above.</div>
         <p class="v-body" id="v-body">Pick No, Partial, or Yes for each criterion. The verdict updates live. Check a red flag and the answer is walk away, whatever the score says.</p>
         <div class="fixlist" id="fixlist" hidden>
           <h4>Fix first</h4>
           <ul id="fixitems"></ul>
+        </div>
+        <div class="plan" id="plan" hidden>
+          <h4>What to do next</h4>
+          <ol id="planitems"></ol>
+        </div>
+        <div class="promptbox" id="promptbox" hidden>
+          <h4>Take this to your AI</h4>
+          <p class="prompt-sub">Copy this prompt into your own LLM to build the fix plan, the email, and the questions for your next call. Nothing leaves this page until you copy it.</p>
+          <textarea id="prompttext" readonly rows="9"></textarea>
+          <div class="actions"><button class="btn" id="copyprompt" type="button">Copy prompt</button></div>
         </div>
       </div>
       <div class="actions">
@@ -155,6 +204,7 @@
     </div>
   </footer>
 </div>
+<script src="../tool-v2.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
