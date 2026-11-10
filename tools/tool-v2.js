@@ -81,9 +81,11 @@ function bonusQuestions(key) {
         lines: [{label, value}], flags: [strings], verdictWord, pct } */
 function buildPrompt(o) {
   var L = [];
+  var article = o.article || 'a';
+  var messageTo = o.messageTo || 'the champion';
   var fwLine = (o.frameworkKey && o.frameworkKey !== 'general')
-    ? 'I\'m assessing a ' + o.tool + ' using the ' + o.frameworkName + ' framework.'
-    : 'I\'m assessing a ' + o.tool + ' (general assessment, no specific sales framework).';
+    ? 'I\'m assessing ' + article + ' ' + o.tool + ' using the ' + o.frameworkName + ' framework.'
+    : 'I\'m assessing ' + article + ' ' + o.tool + ' (general assessment, no specific sales framework).';
   L.push(fwLine);
   L.push('');
   L.push(o.linesHeader || 'My scores (0 = no, 1 = partial, 2 = yes):');
@@ -97,7 +99,7 @@ function buildPrompt(o) {
   L.push('');
   L.push('Act as a ' + o.coach + '. Based on this assessment:');
   L.push('1. Write a 2-week fix plan, in order, with owners for each step.');
-  L.push('2. Draft the message to the champion that gets the missing answers.');
+  L.push('2. Draft the message to ' + messageTo + ' that gets the missing answers.');
   L.push('3. List the 5 sharpest questions to ask on the next call.');
   L.push('4. Tell me the one thing most likely to kill this ' + o.subject + ' if I ignore it.');
   return L.join('\n');

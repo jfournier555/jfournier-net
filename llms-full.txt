@@ -81,7 +81,7 @@ End-to-end SaaS implementation for 20+ strategic partners on Care360. 80%+ NPS o
 
 ## Tools
 
-Five free tools from the way he works. Free, in the browser, no signup, no data leaves the page. Each scores an assessment, gives specific recommendations on what to do next, and generates a copyable prompt to paste into your own LLM for follow-up. The four sales tools support MEDDPICC, BANT, Challenger, SPIN, Sandler, and Solution Selling through a framework dropdown, which adds two framework questions, framework tags and tips on the criteria, and a framework-specific first step in the plan.
+Eight free tools from the way he works. Free, in the browser, no signup, no data leaves the page. Each scores an assessment, gives specific recommendations on what to do next, and generates a copyable prompt to paste into your own LLM for follow-up. The four sales tools support MEDDPICC, BANT, Challenger, SPIN, Sandler, and Solution Selling through a framework dropdown, which adds two framework questions, framework tags and tips on the criteria, and a framework-specific first step in the plan. Three of the eight are playbooks: they take a situation, score a four-question diagnostic, and hand you a sequenced plan, the message to send, and five sharp questions. Scorecards diagnose; playbooks are the fix.
 
 ### PoC Evaluation Scorecard — https://jfournier.net/tools/poc-scorecard/
 
@@ -138,6 +138,42 @@ Verdicts: 80% or higher, "Expand now." 50–79%, "Fix these gaps first." Below 5
 Four red flags, any one of which overrides the score to "Not yet.": no demonstrated value; the account is at risk (renewal first); the "expansion" is shelfware they already own and don't use; no economic buyer in the loop.
 
 Thesis: an at-risk account doesn't expand, it churns. The renewal case comes first.
+
+### Renewal Save Playbook — https://jfournier.net/tools/renewal-save-playbook/
+
+Five situations: champion left; usage dropped; sponsor gone silent; budget cut; competitor in the account. Four diagnostic criteria, scored 0/1/2: real reason known (x3), second relationship (x2), value demonstrated in the customer's own numbers (x2), decision process mapped (x2). Maximum weighted score 18.
+
+Verdicts: 80% or higher, "Saveable, move now." 50–79%, "Saveable, but thin." Below 50%, "This is a churn, not a save."
+
+Three red flags, any one of which overrides the score to "This is a churn, not a save.": no one inside will tell you the real reason; the only relationship was the person who left; the customer has already signed with the competitor.
+
+The plan is a 30-day spine (diagnose, rebuild the relationship map, prove value in their numbers, the commercial conversation) with a situation-specific first step prepended. Each situation has its own message and five sharp questions.
+
+Thesis: a save is a diagnosis first. Most saves fail because the CSM treats the symptom, the renewal date, instead of the cause.
+
+### Champion Departure Playbook — https://jfournier.net/tools/champion-departure-playbook/
+
+Five situations: champion left, no successor named; champion left, successor named but new; champion was promoted internally; champion left for a competitor; champion left and the renewal is within 90 days. Four diagnostic criteria, scored 0/1/2: second relationship in the account (x3), the successor is known (x2), value is documented (x2), renewal date and decision process known (x2). Maximum weighted score 18.
+
+Verdicts: 80% or higher, "Rebuildable, move now." 50–79%, "Rebuildable, but thin." Below 50%, "Too late to rebuild, protect the exit."
+
+Three red flags, any one of which overrides the score to "Too late to rebuild, protect the exit.": the champion was the only relationship and the renewal is within 30 days; the successor has already brought in a competitor; no one inside will take a meeting.
+
+The plan is a 7/14/30-day rebuild spine with a situation-specific first step prepended. A bad verdict gets an exit-protection plan instead of the rebuild spine. Each situation has its own message to the successor and five sharp questions.
+
+Thesis: the champion leaving is the highest-stakes event in post-sales. The rebuild is 7/14/30 days, and the first week decides whether the account survives.
+
+### Onboarding Time-to-Value Playbook — https://jfournier.net/tools/onboarding-playbook/
+
+Five situations: new customer, first rollout; new team on an existing account; new use case on an existing account; re-onboarding after a failed rollout; executive sponsor changed during onboarding. Four diagnostic criteria, scored 0/1/2: first value defined (x3), named owner on the customer side (x2), 30/60-day plan agreed, with dates (x2), usage measured, not just "training complete" (x2). Maximum weighted score 18.
+
+Verdicts: 80% or higher, "On track to first value." 50–79%, "On track, but thin." Below 50%, "Stalled, reset the onboarding."
+
+Three red flags, any one of which overrides the score to "Stalled, reset the onboarding.": no named owner on the customer side; "training complete" is the only success measure; the sponsor hasn't been in a meeting since the sale.
+
+The plan is a 30/60-day spine (first value, adoption, expansion-ready) with a situation-specific first step prepended. Each situation has its own message and five sharp questions.
+
+Thesis: onboarding speed is the number one leading indicator of NRR. First value means one workflow working in the customer's hands, not "training complete."
 
 ## Writing
 

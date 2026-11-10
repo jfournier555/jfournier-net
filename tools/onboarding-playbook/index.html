@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding Time-to-Value Playbook — Justin Fournier</title>
+<meta name="description" content="The first 30/60 days decide the renewal. Score your onboarding, get the 30/60-day playbook, the message, and the five questions for your situation. Free, in the browser, no data leaves the page.">
+<link rel="canonical" href="https://jfournier.net/tools/onboarding-playbook/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%235b9dff' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jfournier.net">
+<meta property="og:title" content="Onboarding Time-to-Value Playbook — Justin Fournier">
+<meta property="og:description" content="The first 30/60 days decide the renewal. Score your onboarding and get the playbook for your situation.">
+<meta property="og:url" content="https://jfournier.net/tools/onboarding-playbook/">
+<meta property="og:image" content="https://jfournier.net/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Onboarding Time-to-Value Playbook — Justin Fournier">
+<meta name="twitter:description" content="The first 30/60 days decide the renewal. Score your onboarding and get the playbook for your situation.">
+<meta name="twitter:image" content="https://jfournier.net/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Onboarding Time-to-Value Playbook",
+  "url": "https://jfournier.net/tools/onboarding-playbook/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0"},
+  "author": {"@type": "Person", "name": "Justin Fournier", "url": "https://jfournier.net/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../scorecards.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="/"><b>jf</b>ournier.net</a>
+    <a href="/tools/renewal-scorecard/">Renewal Scorecard →</a>
+  </div>
+
+  <header class="tool-head">
+    <div class="kicker">Free tool — no signup</div>
+    <h1>Onboarding Time-to-Value Playbook.</h1>
+    <p class="lede">I've seen the renewal decided in the first 60 days. Not in the renewal meeting, in the first month, when the customer either got one workflow working in their hands, or didn't. This playbook scores where your onboarding stands and hands you the 30/60-day sequence for your situation.</p>
+    <p class="privacy">Runs entirely in your browser. Nothing you enter leaves this page.</p>
+  </header>
+
+  <main>
+    <section class="tool-sec" id="situation">
+      <div class="sec-label">Situation</div>
+      <div class="sec-title">Which onboarding is this?</div>
+      <p class="sec-sub">The playbook changes with the situation. Pick the one you're in, and the plan, the message, and the five questions follow it.</p>
+      <div class="opts">
+        <label><input type="radio" name="situation" value="new"><span>New customer, first rollout</span></label>
+        <label><input type="radio" name="situation" value="newteam"><span>New team on an existing account</span></label>
+        <label><input type="radio" name="situation" value="newcase"><span>New use case on an existing account</span></label>
+        <label><input type="radio" name="situation" value="reonboard"><span>Re-onboarding after a failed rollout</span></label>
+        <label><input type="radio" name="situation" value="sponsor"><span>Executive sponsor changed during onboarding</span></label>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="criteria">
+      <div class="sec-label">Diagnostic</div>
+      <div class="sec-title">Four criteria, weighted.</div>
+      <p class="sec-sub">First value carries the most weight. A workflow working in the customer's hands beats a completed training deck every time.</p>
+
+      <div class="criterion" data-key="firstvalue" data-weight="3">
+        <h3>First value defined <span class="w">WEIGHT ×3</span></h3>
+        <p>You can say what "working" means, in the customer's own words. One workflow, named, not "the platform is live."</p>
+        <div class="opts">
+          <label><input type="radio" name="firstvalue" value="0"><span>No</span></label>
+          <label><input type="radio" name="firstvalue" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="firstvalue" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="owner" data-weight="2">
+        <h3>Named owner on the customer side <span class="w">WEIGHT ×2</span></h3>
+        <p>One person inside the account owns the rollout and can say yes to the next step.</p>
+        <div class="opts">
+          <label><input type="radio" name="owner" value="0"><span>No</span></label>
+          <label><input type="radio" name="owner" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="owner" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="plan" data-weight="2">
+        <h3>30/60-day plan agreed, with dates <span class="w">WEIGHT ×2</span></h3>
+        <p>The plan is written down, dated, and agreed by both sides. Not a deck you sent once.</p>
+        <div class="opts">
+          <label><input type="radio" name="plan" value="0"><span>No</span></label>
+          <label><input type="radio" name="plan" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="plan" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="usage" data-weight="2">
+        <h3>Usage measured, not just "training complete" <span class="w">WEIGHT ×2</span></h3>
+        <p>You can see the workflow being used: runs, records, results. Not just who sat through training.</p>
+        <div class="opts">
+          <label><input type="radio" name="usage" value="0"><span>No</span></label>
+          <label><input type="radio" name="usage" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="usage" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="flags">
+      <div class="sec-label">Red flags</div>
+      <div class="sec-title">Any one of these ends it.</div>
+      <p class="sec-sub">Check any that apply. A single red flag overrides the score. This onboarding is stalled, whatever the score says.</p>
+      <div class="flags">
+        <label class="flag" data-key="noOwner"><input type="checkbox"><span><strong>No named owner</strong> on the customer side.</span></label>
+        <label class="flag" data-key="trainingOnly"><input type="checkbox"><span><strong>"Training complete" is the only success measure.</strong> No usage, no workflow, no result.</span></label>
+        <label class="flag" data-key="sponsorGone"><input type="checkbox"><span><strong>The sponsor hasn't been in a meeting</strong> since the sale.</span></label>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="result">
+      <div class="verdict idle" id="verdict">
+        <div class="v-score" id="v-score">—</div>
+        <div class="v-title" id="v-title">Pick a situation, then score the four criteria.</div>
+        <p class="v-body" id="v-body">Pick the situation above, then No, Partial, or Yes for each criterion. The verdict updates live. Check a red flag and the answer is stalled, whatever the score says.</p>
+        <div class="fixlist" id="fixlist" hidden>
+          <h4>Fix first</h4>
+          <ul id="fixitems"></ul>
+        </div>
+        <div class="plan" id="plan" hidden>
+          <h4>What to do next: the 30/60-day plan</h4>
+          <ol id="planitems"></ol>
+        </div>
+        <div class="fixlist" id="msgbox" hidden>
+          <h4>The message to send</h4>
+          <p class="note" id="msgtext"></p>
+        </div>
+        <div class="fixlist" id="qbox" hidden>
+          <h4>Five sharp questions</h4>
+          <ul id="qitems"></ul>
+        </div>
+        <p class="sec-sub" id="sithint">Pick a situation above to get the plan, the message, and the five questions.</p>
+        <div class="promptbox" id="promptbox" hidden>
+          <h4>Take this to your AI</h4>
+          <p class="prompt-sub">Copy this prompt into your own LLM to build the fix plan, the message, and the questions for your next step. Nothing leaves this page until you copy it.</p>
+          <textarea id="prompttext" readonly rows="9"></textarea>
+          <div class="actions"><button class="btn" id="copyprompt" type="button">Copy prompt</button></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="reset" type="button">Reset scores</button>
+        <a class="btn" href="/tools/renewal-scorecard/">Score a renewal →</a>
+      </div>
+      <p class="note"><strong>How I think about this:</strong> onboarding speed is the #1 leading indicator of NRR. That's the research, and my own book backs it up, 118% net revenue retention on H1 finalized deals. The first 30/60 days decide the renewal, not the renewal meeting. First value means one workflow working in the customer's hands. "Training complete" is an attendance sheet, not value.</p>
+      <p class="note"><strong>Pairs with the Renewal Scorecard:</strong> this playbook gets the onboarding to first value. The scorecard tells you whether the account is going to renew. Run the playbook first, score the renewal second.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <div class="f-brand">Justin Fournier</div>
+        <div class="f-sub">LAS VEGAS, NV</div>
+      </div>
+      <a class="f-mail" href="mailto:JFournier555@gmail.com">JFournier555@gmail.com</a>
+    </div>
+  </footer>
+</div>
+<script src="../tool-v2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

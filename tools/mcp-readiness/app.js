@@ -166,6 +166,7 @@ if (typeof document !== 'undefined') {
       });
       prompttextEl.value = V2.buildPrompt({
         tool: 'MCP readiness',
+        article: 'an',
         frameworkKey: 'general',
         frameworkName: 'General',
         coach: 'AI adoption advisor',

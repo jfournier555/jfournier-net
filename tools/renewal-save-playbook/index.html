@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renewal Save Playbook — Justin Fournier</title>
+<meta name="description" content="A save is a diagnosis first. Pick the risk signal, score four diagnostic questions, and get a sequenced 30-day save plan, the message to send, and the five sharpest questions. Free, in the browser, no data leaves the page.">
+<link rel="canonical" href="https://jfournier.net/tools/renewal-save-playbook/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%235b9dff' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jfournier.net">
+<meta property="og:title" content="Renewal Save Playbook — Justin Fournier">
+<meta property="og:description" content="A save is a diagnosis first. Pick the risk signal, score four diagnostic questions, and get a sequenced 30-day save plan.">
+<meta property="og:url" content="https://jfournier.net/tools/renewal-save-playbook/">
+<meta property="og:image" content="https://jfournier.net/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Renewal Save Playbook — Justin Fournier">
+<meta name="twitter:description" content="A save is a diagnosis first. Pick the risk signal, score four diagnostic questions, and get a sequenced 30-day save plan.">
+<meta name="twitter:image" content="https://jfournier.net/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Renewal Save Playbook",
+  "url": "https://jfournier.net/tools/renewal-save-playbook/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0"},
+  "author": {"@type": "Person", "name": "Justin Fournier", "url": "https://jfournier.net/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../scorecards.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="/"><b>jf</b>ournier.net</a>
+    <a href="/tools/renewal-scorecard/">Renewal Scorecard →</a>
+  </div>
+
+  <header class="tool-head">
+    <div class="kicker">Free tool — no signup</div>
+    <h1>Renewal Save Playbook.</h1>
+    <p class="lede">I've lost renewals two ways: the account that churned, and the save I ran that was really <strong>a churn wearing a save's clothes</strong>. The difference was never the discount. It was whether I knew the real reason it was at risk before I started saving it. Pick the signal, diagnose honestly, then move in order.</p>
+    <p class="privacy">Runs entirely in your browser. Nothing you enter leaves this page.</p>
+  </header>
+
+  <main>
+    <section class="tool-sec" id="situation">
+      <div class="sec-label">The signal</div>
+      <div class="sec-title">Start from the signal.</div>
+      <p class="sec-sub">A save is a diagnosis first. Most saves fail because the CSM treats the symptom (the renewal date) instead of the cause. The plan, the message, and the questions change with the signal, so pick it first.</p>
+
+      <div class="criterion">
+        <h3>What is the signal?</h3>
+        <p>One signal at a time. If two are true, pick the one that showed up first. That is usually the cause, and the other is the consequence.</p>
+        <div class="opts">
+          <label><input type="radio" name="situation" value="champion"><span>Champion left</span></label>
+          <label><input type="radio" name="situation" value="usage"><span>Usage dropped</span></label>
+          <label><input type="radio" name="situation" value="sponsor"><span>Sponsor gone silent</span></label>
+          <label><input type="radio" name="situation" value="budget"><span>Budget cut</span></label>
+          <label><input type="radio" name="situation" value="competitor"><span>Competitor in the account</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="diagnosis">
+      <div class="sec-label">Diagnosis</div>
+      <div class="sec-title">Four questions, weighted.</div>
+      <p class="sec-sub">The real reason carries the most weight. A save built on the stated reason is a save built on a guess.</p>
+
+      <div class="criterion" data-key="reason" data-weight="3">
+        <h3>Real reason known <span class="w">WEIGHT ×3</span></h3>
+        <p>Do you know the REAL reason it is at risk, not the stated reason? "Budget" means the value was never proven. "We are consolidating" means someone stopped believing.</p>
+        <div class="opts">
+          <label><input type="radio" name="reason" value="0"><span>No</span></label>
+          <label><input type="radio" name="reason" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="reason" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="second" data-weight="2">
+        <h3>Second relationship <span class="w">WEIGHT ×2</span></h3>
+        <p>Do you have a second relationship in the account? One relationship is a point of failure, not a relationship map. If the only person who knows you is the person who left, you are starting from zero.</p>
+        <div class="opts">
+          <label><input type="radio" name="second" value="0"><span>No</span></label>
+          <label><input type="radio" name="second" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="second" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="value" data-weight="2">
+        <h3>Value demonstrated <span class="w">WEIGHT ×2</span></h3>
+        <p>Is the value demonstrated in the customer's own numbers? Value in your numbers is a claim. Value in their numbers is a fact. If the customer cannot say what it did for them, you have a pitch, not a case.</p>
+        <div class="opts">
+          <label><input type="radio" name="value" value="0"><span>No</span></label>
+          <label><input type="radio" name="value" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="value" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="decision" data-weight="2">
+        <h3>Decision process mapped <span class="w">WEIGHT ×2</span></h3>
+        <p>Is the decision process mapped: who signs, by when? A save with no decision process is a conversation with no end.</p>
+        <div class="opts">
+          <label><input type="radio" name="decision" value="0"><span>No</span></label>
+          <label><input type="radio" name="decision" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="decision" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="flags">
+      <div class="sec-label">Red flags</div>
+      <div class="sec-title">Any one of these ends it.</div>
+      <p class="sec-sub">Check any that apply. A single red flag overrides the score. This is a churn, not a save.</p>
+      <div class="flags">
+        <label class="flag" data-key="noRealReason"><input type="checkbox"><span><strong>No one inside will tell you the real reason</strong>: you are guessing, and a guess is not a save.</span></label>
+        <label class="flag" data-key="onlyRelationshipLeft"><input type="checkbox"><span><strong>The only relationship was the person who left</strong>: there is no one left to save it with.</span></label>
+        <label class="flag" data-key="signedCompetitor"><input type="checkbox"><span><strong>The customer has already signed with the competitor</strong>: the renewal conversation is over.</span></label>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="result">
+      <div class="verdict idle" id="verdict">
+        <div class="v-score" id="v-score">—</div>
+        <div class="v-title" id="v-title">Diagnose first.</div>
+        <p class="v-body" id="v-body">Pick the signal above, then score the four diagnostic questions. The verdict updates live, and a red flag ends it whatever the score says.</p>
+        <div class="fixlist" id="fixlist" hidden>
+          <h4>Fix first</h4>
+          <ul id="fixitems"></ul>
+        </div>
+        <div class="plan" id="plan" hidden>
+          <h4>What to do next: 30 days</h4>
+          <ol id="planitems"></ol>
+        </div>
+        <div class="plan" id="message" hidden>
+          <h4>Message to send</h4>
+          <p class="prompt-sub" id="messagetext"></p>
+        </div>
+        <div class="plan" id="questions" hidden>
+          <h4>Five sharp questions</h4>
+          <ol id="questionitems"></ol>
+        </div>
+        <div class="promptbox" id="promptbox" hidden>
+          <h4>Take this to your AI</h4>
+          <p class="prompt-sub">Copy this prompt into your own LLM to build the fix plan, the message, and the questions for your next step. Nothing leaves this page until you copy it.</p>
+          <textarea id="prompttext" readonly rows="9"></textarea>
+          <div class="actions"><button class="btn" id="copyprompt" type="button">Copy prompt</button></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="reset" type="button">Reset scores</button>
+        <a class="btn" href="/tools/renewal-scorecard/">Score the renewal →</a>
+      </div>
+      <p class="note"><strong>How I use this:</strong> the saves I've lost were never lost on the renewal date. They were lost months earlier, when the champion went quiet or usage dropped and I treated it as a busy quarter instead of a signal. The diagnostic is the whole playbook: if you know the real reason, you can save it. If you don't, you're negotiating a discount on a churn.</p>
+      <p class="note"><strong>Pairs with the Renewal Scorecard:</strong> score the account there first. The scorecard tells you it is at risk; this tells you what to do about it. A single-threaded account has no champion, it has a point of failure. So the first job in most saves is a second relationship, not a discount.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <div class="f-brand">Justin Fournier</div>
+        <div class="f-sub">LAS VEGAS, NV</div>
+      </div>
+      <a class="f-mail" href="mailto:JFournier555@gmail.com">JFournier555@gmail.com</a>
+    </div>
+  </footer>
+</div>
+<script src="../tool-v2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Champion Departure Playbook — Justin Fournier</title>
+<meta name="description" content="Your champion left. The rebuild is 7/14/30 days, and the first week decides whether the account survives. Score the rebuild, get the plan, the message, and the five questions. Free, in the browser, no data leaves the page.">
+<link rel="canonical" href="https://jfournier.net/tools/champion-departure-playbook/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0e'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='30' font-weight='700' fill='%235b9dff' text-anchor='middle'%3EJF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jfournier.net">
+<meta property="og:title" content="Champion Departure Playbook — Justin Fournier">
+<meta property="og:description" content="Your champion left. Score the rebuild, get the plan, the message, and the five questions.">
+<meta property="og:url" content="https://jfournier.net/tools/champion-departure-playbook/">
+<meta property="og:image" content="https://jfournier.net/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Champion Departure Playbook — Justin Fournier">
+<meta name="twitter:description" content="Your champion left. Score the rebuild, get the plan, the message, and the five questions.">
+<meta name="twitter:image" content="https://jfournier.net/og-card.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Champion Departure Playbook",
+  "url": "https://jfournier.net/tools/champion-departure-playbook/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0"},
+  "author": {"@type": "Person", "name": "Justin Fournier", "url": "https://jfournier.net/"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../scorecards.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="/"><b>jf</b>ournier.net</a>
+    <a href="/tools/renewal-scorecard/">Renewal Scorecard →</a>
+  </div>
+
+  <header class="tool-head">
+    <div class="kicker">Free tool — no signup</div>
+    <h1>Champion Departure Playbook.</h1>
+    <p class="lede">I learned this the expensive way: when the champion leaves, the account goes quiet unless you rebuild fast. The rebuild is 7/14/30 days, and the first week decides whether it survives. Score the rebuild, then get the plan, the message, and the five questions to ask the successor.</p>
+    <p class="privacy">Runs entirely in your browser. Nothing you enter leaves this page.</p>
+  </header>
+
+  <main>
+    <section class="tool-sec" id="situation">
+      <div class="sec-label">Situation</div>
+      <div class="sec-title">What happened?</div>
+      <p class="sec-sub">Pick the one that matches. The plan, the message, and the five questions all change with the situation.</p>
+
+      <div class="criterion">
+        <h3>Your situation</h3>
+        <p>One pick. If two apply, take the one with the shorter deadline.</p>
+        <div class="opts">
+          <label><input type="radio" name="situation" value="no-successor"><span>Champion left, no successor named</span></label>
+          <label><input type="radio" name="situation" value="new-successor"><span>Champion left, successor named but new</span></label>
+          <label><input type="radio" name="situation" value="promoted"><span>Champion was promoted internally</span></label>
+          <label><input type="radio" name="situation" value="competitor"><span>Champion left for a competitor</span></label>
+          <label><input type="radio" name="situation" value="renewal-90"><span>Champion left, renewal within 90 days</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="criteria">
+      <div class="sec-label">Rebuild</div>
+      <div class="sec-title">Four criteria, weighted.</div>
+      <p class="sec-sub">A second relationship carries the most weight. A rebuild with no one to rebuild to is not a rebuild.</p>
+
+      <div class="criterion" data-key="second" data-weight="3">
+        <h3>A second relationship in the account <span class="w">WEIGHT ×3</span></h3>
+        <p>Someone else inside the account knows you, trusts the product, and will take your call. Not just the champion.</p>
+        <div class="opts">
+          <label><input type="radio" name="second" value="0"><span>No</span></label>
+          <label><input type="radio" name="second" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="second" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="successor" data-weight="2">
+        <h3>The successor is known <span class="w">WEIGHT ×2</span></h3>
+        <p>You know who decides now, or who will. A name, not a title.</p>
+        <div class="opts">
+          <label><input type="radio" name="successor" value="0"><span>No</span></label>
+          <label><input type="radio" name="successor" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="successor" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="value-doc" data-weight="2">
+        <h3>Value is documented <span class="w">WEIGHT ×2</span></h3>
+        <p>The value is written down in a form the successor can see. Results, not slides.</p>
+        <div class="opts">
+          <label><input type="radio" name="value-doc" value="0"><span>No</span></label>
+          <label><input type="radio" name="value-doc" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="value-doc" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="renewal-known" data-weight="2">
+        <h3>Renewal date and decision process known <span class="w">WEIGHT ×2</span></h3>
+        <p>You know when the renewal lands and who signs it. The date and the decider.</p>
+        <div class="opts">
+          <label><input type="radio" name="renewal-known" value="0"><span>No</span></label>
+          <label><input type="radio" name="renewal-known" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="renewal-known" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="flags">
+      <div class="sec-label">Red flags</div>
+      <div class="sec-title">Any one of these ends it.</div>
+      <p class="sec-sub">Check any that apply. A single red flag overrides the score. The rebuild is not the job anymore.</p>
+      <div class="flags">
+        <label class="flag" data-key="only-30"><input type="checkbox"><span><strong>The champion was the only relationship</strong> and the renewal is within 30 days.</span></label>
+        <label class="flag" data-key="competitor-in"><input type="checkbox"><span><strong>The successor has already brought in a competitor.</strong></span></label>
+        <label class="flag" data-key="no-meeting"><input type="checkbox"><span><strong>No one inside will take a meeting.</strong></span></label>
+      </div>
+    </section>
+
+    <section class="tool-sec" id="result">
+      <div class="verdict idle" id="verdict">
+        <div class="v-score" id="v-score">—</div>
+        <div class="v-title" id="v-title">Score the four criteria above.</div>
+        <p class="v-body" id="v-body">Pick No, Partial, or Yes for each criterion, and pick your situation. The verdict updates live. Check a red flag and the answer is protect the exit, whatever the score says.</p>
+        <div class="fixlist" id="fixlist" hidden>
+          <h4>Fix first</h4>
+          <ul id="fixitems"></ul>
+        </div>
+        <div class="plan" id="plan" hidden>
+          <h4>What to do next</h4>
+          <ol id="planitems"></ol>
+        </div>
+        <div class="note" id="msgbox" hidden>
+          <strong>The message to send:</strong><br><span id="msgtext"></span>
+        </div>
+        <div class="fixlist" id="qbox" hidden>
+          <h4>Five sharp questions</h4>
+          <ul id="qitems"></ul>
+        </div>
+        <div class="note" id="sitnote" hidden>
+          Pick a situation above first. The plan, the message, and the five questions all depend on what happened.
+        </div>
+        <div class="promptbox" id="promptbox" hidden>
+          <h4>Take this to your AI</h4>
+          <p class="prompt-sub">Copy this prompt into your own LLM to build the fix plan, the message, and the questions for your next step. Nothing leaves this page until you copy it.</p>
+          <textarea id="prompttext" readonly rows="9"></textarea>
+          <div class="actions"><button class="btn" id="copyprompt" type="button">Copy prompt</button></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="reset" type="button">Reset scores</button>
+        <a class="btn" href="/tools/renewal-scorecard/">Score the renewal →</a>
+      </div>
+      <p class="note"><strong>How I think about this:</strong> a single-threaded account has no champion, it has a point of failure. My rule of thumb: 0–20% dependency, we can survive a departure; 21–50%, some risk; 51–80%, high risk, widen relationships now; 81–100%, crisis mode. This playbook is what you run when the crisis arrives.</p>
+      <p class="note"><strong>Say it once, clearly:</strong> noticing is worthless unless you say it out loud. When the champion leaves, someone has to say it in the room, once, clearly, before the account goes quiet. That sentence is the first step of the rebuild.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <div class="f-brand">Justin Fournier</div>
+        <div class="f-sub">LAS VEGAS, NV</div>
+      </div>
+      <a class="f-mail" href="mailto:JFournier555@gmail.com">JFournier555@gmail.com</a>
+    </div>
+  </footer>
+</div>
+<script src="../tool-v2.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

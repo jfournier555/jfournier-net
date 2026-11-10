@@ -288,6 +288,7 @@ if (typeof document !== 'undefined') {
     if (r.verdict !== 'idle') {
       prompttextEl.value = V2.buildPrompt({
         tool: 'expansion readiness',
+        article: 'an',
         frameworkKey: currentFramework(),
         frameworkName: V2.frameworkName(currentFramework()),
         coach: 'sales coach',
