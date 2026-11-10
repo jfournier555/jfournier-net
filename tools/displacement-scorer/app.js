@@ -80,13 +80,24 @@ var PLANS = {
   ]
 };
 
+/* Framework-aware first plan step: when a framework is active, the plan opens
+   with the framework's core check for this tool, then the verdict plan follows. */
+var FW_PLAN_STEPS = {
+  meddpicc: 'Run the displacement through MEDDPICC: the Competition letter is the incumbent, and the Champion and Economic Buyer are the two people who decide whether it moves.',
+  bant: 'Run it through BANT: Budget, Authority, Need, Timeline. A displacement without budget and authority is a feature comparison.',
+  challenger: 'Run it through Challenger: teach the buyer a new way to see their workflow, reframe the incumbent\u2019s strength, and find the mobilizer. Challenger is the displacement methodology.',
+  spin: 'Run it through SPIN: the implication is the cost of staying with the incumbent. If that number is not quantified, the buyer has no reason to move.',
+  sandler: 'Run it through Sandler: pain confirmed with the buyer, decision process and budget agreed upfront. A displacement with surprises at the end is a lost deal.',
+  solution: 'Run it through Solution Selling: vision created, evaluation plan agreed. The buyer should be able to describe life after the incumbent without you.'
+};
+
 var VERDICT_WORDS = { good: 'Displace now', warn: 'Build the wedge first', bad: "Don't bother" };
 
 /* answers: {dependency:0|1|2, ...} — missing keys count as unanswered.
    flags: {goodEnough:bool, ...}
    bonusAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
    bonusDefs: [{key, label, weight, rec0, rec1}] from V2.bonusQuestions(framework). */
-function scoreDisplacement(answers, flags, bonusAnswers, bonusDefs) {
+function scoreDisplacement(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var max = 0, got = 0, answered = 0, fixes = [];
   CRITERIA.forEach(function (c) {
     max += 2 * c.weight;
@@ -135,12 +146,12 @@ function scoreDisplacement(answers, flags, bonusAnswers, bonusDefs) {
     pct: pct, answered: answered, total: total,
     verdict: verdict, body: body,
     fixes: fixes, flags: hitFlags.map(function (k) { return FLAGS[k]; }),
-    plan: verdict === 'idle' ? [] : PLANS[verdict]
+    plan: verdict === 'idle' ? [] : ((frameworkKey && frameworkKey !== 'general' && FW_PLAN_STEPS[frameworkKey]) ? [FW_PLAN_STEPS[frameworkKey]].concat(PLANS[verdict]) : PLANS[verdict])
   };
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scoreDisplacement: scoreDisplacement, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS };
+  module.exports = { scoreDisplacement: scoreDisplacement, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS, FW_PLAN_STEPS: FW_PLAN_STEPS };
 }
 
 if (typeof document !== 'undefined') {
@@ -253,7 +264,7 @@ if (typeof document !== 'undefined') {
   function render() {
     var state = readState();
     var defs = bonusDefs();
-    var r = scoreDisplacement(state.answers, state.flags, state.bonus, defs);
+    var r = scoreDisplacement(state.answers, state.flags, state.bonus, defs, currentFramework());
     verdictEl.className = 'verdict ' + r.verdict;
     scoreEl.textContent = r.answered === 0 && r.flags.length === 0 ? '—' : r.pct + '%';
     titleEl.textContent = TITLES[r.verdict];

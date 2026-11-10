@@ -79,13 +79,24 @@ var PLANS = {
   ]
 };
 
+/* Framework-aware first plan step: when a framework is active, the plan opens
+   with the framework's core check for this tool, then the verdict plan follows. */
+var FW_PLAN_STEPS = {
+  meddpicc: 'Run the expansion through MEDDPICC: Metrics are the demonstrated value, and the Economic Buyer and Champion are the two people who have to say yes.',
+  bant: 'Run it through BANT: Budget, Authority, Need, Timeline. An expansion without budget is a discount conversation.',
+  challenger: 'Run it through Challenger: teach the customer what the expansion is worth in their own numbers, and find the mobilizer who can sell it internally.',
+  spin: 'Run it through SPIN: the need-payoff is the value the customer states in their own words. If they cannot say it, the expansion has no case.',
+  sandler: 'Run it through Sandler: pain confirmed, budget and decision process agreed upfront. An expansion pitched without the upfront contract becomes a discount.',
+  solution: 'Run it through Solution Selling: the expansion is the next chapter of the vision, not a new sale. The customer should be able to describe it without you.'
+};
+
 var VERDICT_WORDS = { good: 'Expand now', warn: 'Fix these gaps first', bad: 'Not yet' };
 
 /* answers: {value:0|1|2, ...} — missing keys count as unanswered.
    flags: {noValue:bool, ...}
    bonusAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
    bonusDefs: [{key, label, weight, rec0, rec1}] from V2.bonusQuestions(framework). */
-function scoreExpansion(answers, flags, bonusAnswers, bonusDefs) {
+function scoreExpansion(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var max = 0, got = 0, answered = 0, fixes = [];
   CRITERIA.forEach(function (c) {
     max += 2 * c.weight;
@@ -134,12 +145,12 @@ function scoreExpansion(answers, flags, bonusAnswers, bonusDefs) {
     pct: pct, answered: answered, total: total,
     verdict: verdict, body: body,
     fixes: fixes, flags: hitFlags.map(function (k) { return FLAGS[k]; }),
-    plan: verdict === 'idle' ? [] : PLANS[verdict]
+    plan: verdict === 'idle' ? [] : ((frameworkKey && frameworkKey !== 'general' && FW_PLAN_STEPS[frameworkKey]) ? [FW_PLAN_STEPS[frameworkKey]].concat(PLANS[verdict]) : PLANS[verdict])
   };
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scoreExpansion: scoreExpansion, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS };
+  module.exports = { scoreExpansion: scoreExpansion, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS, FW_PLAN_STEPS: FW_PLAN_STEPS };
 }
 
 if (typeof document !== 'undefined') {
@@ -252,7 +263,7 @@ if (typeof document !== 'undefined') {
   function render() {
     var state = readState();
     var defs = bonusDefs();
-    var r = scoreExpansion(state.answers, state.flags, state.bonus, defs);
+    var r = scoreExpansion(state.answers, state.flags, state.bonus, defs, currentFramework());
     verdictEl.className = 'verdict ' + r.verdict;
     scoreEl.textContent = r.answered === 0 && r.flags.length === 0 ? '—' : r.pct + '%';
     titleEl.textContent = TITLES[r.verdict];

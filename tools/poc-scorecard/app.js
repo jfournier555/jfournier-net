@@ -81,13 +81,24 @@ var PLANS = {
   ]
 };
 
+/* Framework-aware first plan step: when a framework is active, the plan opens
+   with the framework's core check for this tool, then the verdict plan follows. */
+var FW_PLAN_STEPS = {
+  meddpicc: 'Run the evaluation through MEDDPICC before the kickoff: Metrics, Economic Buyer, Decision Criteria, Decision Process, Paper Process, Pain, Champion, Competition. The lowest-scored criterion tells you which letter is missing.',
+  bant: 'Run it through BANT: Budget, Authority, Need, Timeline. A No on any one of those four is a stop, not a gap.',
+  challenger: 'Run it through Challenger: did you teach the buyer something they did not know, and did you find the mobilizer who can drive the change?',
+  spin: 'Run it through SPIN: Situation, Problem, Implication, Need-payoff. If the implication is not quantified in the buyer\u2019s numbers, the urgency is not real.',
+  sandler: 'Run it through Sandler: pain confirmed, budget and decision process agreed upfront. No surprises after the demo.',
+  solution: 'Run it through Solution Selling: vision created, evaluation plan agreed. The buyer should be able to describe the future state without you.'
+};
+
 var VERDICT_WORDS = { good: 'Run it', warn: 'Fix these gaps first', bad: 'Walk away' };
 
 /* answers: {problem:0|1|2, ...} — missing keys count as unanswered.
    flags: {noCriteria:bool, ...}
    bonusAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
    bonusDefs: [{key, label, weight, rec0, rec1}] from V2.bonusQuestions(framework). */
-function scorePoc(answers, flags, bonusAnswers, bonusDefs) {
+function scorePoc(answers, flags, bonusAnswers, bonusDefs, frameworkKey) {
   var max = 0, got = 0, answered = 0, fixes = [];
   CRITERIA.forEach(function (c) {
     max += 2 * c.weight;
@@ -136,12 +147,12 @@ function scorePoc(answers, flags, bonusAnswers, bonusDefs) {
     pct: pct, answered: answered, total: total,
     verdict: verdict, body: body,
     fixes: fixes, flags: hitFlags.map(function (k) { return FLAGS[k]; }),
-    plan: verdict === 'idle' ? [] : PLANS[verdict]
+    plan: verdict === 'idle' ? [] : ((frameworkKey && frameworkKey !== 'general' && FW_PLAN_STEPS[frameworkKey]) ? [FW_PLAN_STEPS[frameworkKey]].concat(PLANS[verdict]) : PLANS[verdict])
   };
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scorePoc: scorePoc, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS };
+  module.exports = { scorePoc: scorePoc, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS, FW_PLAN_STEPS: FW_PLAN_STEPS };
 }
 
 if (typeof document !== 'undefined') {
@@ -255,7 +266,7 @@ if (typeof document !== 'undefined') {
   function render() {
     var state = readState();
     var defs = bonusDefs();
-    var r = scorePoc(state.answers, state.flags, state.bonus, defs);
+    var r = scorePoc(state.answers, state.flags, state.bonus, defs, currentFramework());
     verdictEl.className = 'verdict ' + r.verdict;
     scoreEl.textContent = r.answered === 0 && r.flags.length === 0 ? '—' : r.pct + '%';
     titleEl.textContent = TITLES[r.verdict];

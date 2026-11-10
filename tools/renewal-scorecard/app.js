@@ -108,6 +108,17 @@ var PLANS = {
   ]
 };
 
+/* Framework-aware first plan step: when a framework is active, the plan opens
+   with the framework's core check for this tool, then the verdict plan follows. */
+var FW_PLAN_STEPS = {
+  meddpicc: 'Run the renewal through MEDDPICC: the Champion letter is Section A. A single-threaded account has no champion, it has a point of failure.',
+  bant: 'Run it through BANT: Authority is the renewal signer, Budget is the renewal number, Timeline is the renewal date. A No on any one of those three is a risk.',
+  challenger: 'Run it through Challenger: teach the customer what the renewal is worth in their numbers, and find the mobilizer who can defend it internally.',
+  spin: 'Run it through SPIN: the implication is the cost of losing the product. If the customer cannot say what it does for them, the renewal has no case.',
+  sandler: 'Run it through Sandler: pain confirmed, decision process and budget agreed upfront. A renewal with surprises at the end is a churn.',
+  solution: 'Run it through Solution Selling: the renewal is the vision working, not a new sale. The customer should be able to describe the value without you.'
+};
+
 var VERDICT_WORDS = { good: 'Safe, renew and expand', warn: 'At risk', bad: 'Churn risk, escalate now' };
 
 function depBand(pct) {
@@ -127,7 +138,7 @@ function sectionBand(pct) {
    value/health: {goals:0|1|2, ...} — missing keys count as unanswered.
    fwAnswers: {fw-champion:0|1|2, ...} — only when a framework is active.
    fwDefs: [{key, label, rec0, rec1}] from V2.bonusQuestions(framework). */
-function scoreRenewal(dep, value, health, fwAnswers, fwDefs) {
+function scoreRenewal(dep, value, health, fwAnswers, fwDefs, frameworkKey) {
   var depYes = 0, depAnswered = 0;
   DEP_ITEMS.forEach(function (d) {
     if (typeof dep[d.key] === 'boolean') { depAnswered++; if (dep[d.key]) depYes++; }
@@ -209,12 +220,12 @@ function scoreRenewal(dep, value, health, fwAnswers, fwDefs) {
     answered: answered, total: total,
     verdict: verdict, body: body,
     fixes: fixes, improvements: improvements,
-    plan: verdict === 'idle' ? [] : PLANS[verdict]
+    plan: verdict === 'idle' ? [] : ((frameworkKey && frameworkKey !== 'general' && FW_PLAN_STEPS[frameworkKey]) ? [FW_PLAN_STEPS[frameworkKey]].concat(PLANS[verdict]) : PLANS[verdict])
   };
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scoreRenewal: scoreRenewal, DEP_ITEMS: DEP_ITEMS, VALUE_ITEMS: VALUE_ITEMS, HEALTH_ITEMS: HEALTH_ITEMS, FW_NOTE_A: FW_NOTE_A, PLANS: PLANS };
+  module.exports = { scoreRenewal: scoreRenewal, DEP_ITEMS: DEP_ITEMS, VALUE_ITEMS: VALUE_ITEMS, HEALTH_ITEMS: HEALTH_ITEMS, FW_NOTE_A: FW_NOTE_A, PLANS: PLANS, FW_PLAN_STEPS: FW_PLAN_STEPS };
 }
 
 if (typeof document !== 'undefined') {
@@ -318,7 +329,7 @@ if (typeof document !== 'undefined') {
     HEALTH_ITEMS.forEach(function (it) { var v = readNum(it.key); if (typeof v !== 'undefined') health[it.key] = v; });
     var defs = bonusDefs();
     defs.forEach(function (b) { var v = readNum(b.key); if (typeof v !== 'undefined') fwAns[b.key] = v; });
-    var r = scoreRenewal(dep, value, health, fwAns, defs);
+    var r = scoreRenewal(dep, value, health, fwAns, defs, currentFramework());
 
     verdictEl.className = 'verdict ' + r.verdict;
     var scoreWord = { idle: '—', good: 'Safe', warn: 'At risk', bad: 'Churn risk' };
