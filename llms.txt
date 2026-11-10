@@ -60,3 +60,4 @@ Scorecards diagnose; playbooks are the fix. Each takes a situation, scores a fou
 ## Writing
 
 - [AI is taking the admin. The judgment is the job.](https://jfournier.net/articles/ai-admin-judgment/): AI agents can draft the renewal plan, the QBR, and the save plan. What they cannot do is decide, notice out loud, or own the technical case.
+- [The booth is a discovery call with worse acoustics.](https://jfournier.net/articles/booth-discovery/): I did not stop people in their tracks by telling them what my software does. I stopped them with "How's Vegas treating ya?" A booth is a discovery call with worse acoustics.
