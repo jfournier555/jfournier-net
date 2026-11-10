@@ -4,4 +4,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
   Cross-Origin-Opener-Policy: same-origin
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-jf1fskel4cYUGWUbYp7oSHbJEk9fXNw+2t4SmT4kAgM='; style-src 'self' 'sha256-QTKtAYiGYoJnBUwrs5PDfMwDaIF7Zat2vjFrItu79KQ=' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-6rbyCkCBAvE3NPJDQkUSh4fWc9jT/jsTHIRuBguHL4s='; style-src 'self' 'sha256-QTKtAYiGYoJnBUwrs5PDfMwDaIF7Zat2vjFrItu79KQ=' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'

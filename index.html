@@ -272,6 +272,7 @@
       <a href="#how">Approach</a>
       <a href="#background">Background</a>
       <a href="#tools">Tools</a>
+      <a href="#writing">Writing</a>
       <a href="#elsewhere">Elsewhere</a>
     </div>
   </div>
@@ -424,7 +425,7 @@
   <div class="wrap">
     <div class="sec-label rv">Tools</div>
     <h2 class="rv">Run it yourself.</h2>
-    <p class="sec-sub rv">Two scorecards from the way I work. Free, in the browser, no signup, no data leaves the page.</p>
+    <p class="sec-sub rv">Five tools from the way I work. Free, in the browser, no signup, no data leaves the page.</p>
     <div class="cards">
       <a class="card tool-card rv" href="/tools/poc-scorecard/">
         <div class="num">01</div>
@@ -455,6 +456,22 @@
         <h3>Expansion Readiness Scorer</h3>
         <p>Score whether an account is ready to expand. An at-risk account doesn't expand, it churns. The renewal case comes first.</p>
         <div class="go">Score the expansion →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="writing">
+  <div class="wrap">
+    <div class="sec-label rv">Writing</div>
+    <h2 class="rv">In my own words.</h2>
+    <p class="sec-sub rv">A few strong pieces on the work, not a feed. No hooks machine, no batching.</p>
+    <div class="cards">
+      <a class="card tool-card rv" href="/articles/ai-admin-judgment/">
+        <div class="num">01</div>
+        <h3>AI is taking the admin. The judgment is the job.</h3>
+        <p>AI agents can draft the renewal plan, the QBR, and the save plan. What they cannot do is decide, notice out loud, or own the technical case.</p>
+        <div class="go">Read it →</div>
       </a>
     </div>
   </div>
@@ -499,7 +516,7 @@
   },{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   // nav active state
-  const secs = ['work','how','background','tools','elsewhere'];
+  const secs = ['work','how','background','tools','writing','elsewhere'];
   const navAs = document.querySelectorAll('.nav-links a');
   const so = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{
