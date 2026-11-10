@@ -102,6 +102,7 @@ function buildPrompt(o) {
   L.push('2. Draft the message to ' + messageTo + ' that gets the missing answers.');
   L.push('3. List the 5 sharpest questions to ask on the next call.');
   L.push('4. Tell me the one thing most likely to kill this ' + o.subject + ' if I ignore it.');
+  L.push('5. Ground this in my internal resources: Slack, Salesforce, Gong, and my other internal tools. Pull the relevant threads, records, and calls, name the source for each fact, build any additional plays the data supports, and flag anything you could not verify.');
   return L.join('\n');
 }
 
