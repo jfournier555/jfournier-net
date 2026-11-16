@@ -113,6 +113,19 @@ var SITUATIONS = {
       'What would have to be true in 30 days for this renewal to be easy?',
       'Who does the successor trust to tell them whether this renewal is worth signing?'
     ]
+  },
+  'warm-handoff': {
+    label: 'Champion introduced you to the successor',
+    step: 'The champion introduced you before they left, so you start with a name and a door. Test the handoff in the first week: get the successor in a meeting, verify the priorities the champion gave you, and confirm the value stands on its own without the champion in the room. An introduction is not a relationship until the successor engages.',
+    message: 'Hi [name], [champion] introduced us before they left, and I wanted to pick up where they left off. I know you are inheriting [product], and I would rather hear what you need from it than assume the last person\u2019s priorities are yours. Can we take 20 minutes this week? I will bring what it has delivered so far, and you tell me what matters to you now.',
+    questions: [
+      'Did the champion endorse you, or just make the introduction?',
+      'Has the successor taken a meeting with you, or are they ghosting the introduction?',
+      'What did the champion tell you about the successor\u2019s priorities, and have you verified it?',
+      'Does the successor see you as a partner, or as the previous champion\u2019s vendor?',
+      'Can the successor see the value without the champion explaining it?',
+      'Does the successor have the authority to renew, or do they need someone else\u2019s sign-off?'
+    ]
   }
 };
 
