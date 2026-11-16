@@ -1,6 +1,6 @@
 /* Champion Departure Playbook: scoring logic.
    Pure functions at the top (testable in node); DOM wiring below.
-   Weights: second relationship x3, everything else x2. Max weighted score 18.
+   Weights: second relationship x3, everything else x2. Max weighted score 22.
    No framework dropdown: this is a rebuild, not a sales motion. */
 'use strict';
 
@@ -11,6 +11,9 @@ var CRITERIA = [
   { key: 'successor', label: 'The successor is known', weight: 2,
     rec0: 'Find the name. Ask the champion before they go dark, ask the admin, ask anyone who will answer. A rebuild without a name is a guess.',
     rec1: 'Confirm the successor actually decides. A name that can\u2019t approve anything is a detour, not a path.' },
+  { key: 'successor-priorities', label: 'The successor\u2019s priorities are known', weight: 2,
+    rec0: 'You know the name but not what they care about. Find out before the first meeting: their priorities, what they inherited, what they would cut. A rebuild that pitches the predecessor\u2019s priorities to the successor is a pitch to the wrong person.',
+    rec1: 'You know some of what the successor cares about. Confirm it in the first meeting. Ask what they need, do not assume the predecessor\u2019s priorities are theirs.' },
   { key: 'value-doc', label: 'Value is documented', weight: 2,
     rec0: 'Write the value down now: what the product did, in the customer\u2019s numbers, on one page. A successor who can\u2019t see the value won\u2019t defend it.',
     rec1: 'Put the value in the successor\u2019s terms. Your metrics are not their metrics. Translate them before the first meeting.' },
@@ -52,7 +55,8 @@ var SITUATIONS = {
       'What did [champion] tell you about us before they left?',
       'What would you need to see from us in the next 30 days to believe this is worth keeping?',
       'Who else on your team uses the product, and what do they think of it?',
-      'If we disappeared tomorrow, what would break first?'
+      'If we disappeared tomorrow, what would break first?',
+      'Who is the most likely successor, and what do they care about that the champion never told you?'
     ]
   },
   'new-successor': {
@@ -64,7 +68,8 @@ var SITUATIONS = {
       'How do you measure whether [product] is working for your team?',
       'What is the one result you would want to show your boss in 30 days?',
       'Who on your team is the real power user, and can I meet them?',
-      'What would make you confident enough to defend this renewal internally?'
+      'What would make you confident enough to defend this renewal internally?',
+      'What did the successor do in their last role that tells you what they value?'
     ]
   },
   promoted: {
@@ -76,7 +81,8 @@ var SITUATIONS = {
       'How does [product] fit the team you are running now?',
       'What is the first thing you would change about how we work together?',
       'Who should I be talking to that I haven\u2019t met yet?',
-      'What does a good next 90 days look like from your side?'
+      'What does a good next 90 days look like from your side?',
+      'What does the successor need to prove in their first 90 days, and how does our product help them prove it?'
     ]
   },
   competitor: {
@@ -88,7 +94,8 @@ var SITUATIONS = {
       'What would you need to see from us to keep the conversation open?',
       'Is the decision about the product, or about the relationship?',
       'What does [product] do for your team that you would miss if it were gone?',
-      'Who else is in the room on this decision, and what do they care about?'
+      'Who else is in the room on this decision, and what do they care about?',
+      'What does the successor care about that the competitor cannot give them?'
     ]
   },
   'renewal-90': {
@@ -100,7 +107,8 @@ var SITUATIONS = {
       'Who else has to say yes, and what do they need to hear?',
       'What is the one result from this term you would want to see again next term?',
       'If budget is the issue, what would you cut first, and what would you protect?',
-      'What would have to be true in 30 days for this renewal to be easy?'
+      'What would have to be true in 30 days for this renewal to be easy?',
+      'Who does the successor trust to tell them whether this renewal is worth signing?'
     ]
   }
 };
@@ -183,8 +191,40 @@ function buildChampionPrompt(buildPrompt, situationKey, answers, r) {
   });
 }
 
+/* Successor research briefing: a second prompt, separate from the rebuild prompt.
+   It asks the AI to research the successor and build a one-page briefing from
+   internal sources plus LinkedIn, naming the source for each fact. Pure function,
+   testable in node. Shown as soon as a situation is picked, verdict or not. */
+function buildSuccessorPrompt(situationKey, answers, r) {
+  var L = [];
+  var sit = (situationKey && SITUATIONS[situationKey]) ? SITUATIONS[situationKey] : null;
+  var verdictText = VERDICT_WORDS[r.verdict] || 'not scored yet';
+  L.push('Research the successor and build me a briefing before I reach out.');
+  L.push('');
+  L.push('Situation: ' + (sit ? sit.label : 'not selected') + '.');
+  L.push('Rebuild verdict: ' + verdictText + ' (' + r.pct + '%).');
+  L.push('');
+  L.push('What I know so far:');
+  CRITERIA.forEach(function (c) {
+    var v = answers[c.key];
+    L.push('- ' + c.label + ': ' + (typeof v === 'number' ? v + ' (0 = no, 1 = partial, 2 = yes)' : 'not scored'));
+  });
+  L.push('');
+  L.push('Build the briefing from my internal resources and LinkedIn: Slack, Salesforce, Gong, and LinkedIn. For each fact, name the source. Flag anything you could not verify.');
+  L.push('');
+  L.push('Cover these five things:');
+  L.push('1. Background: who the successor is, their role, their history at the account, and what they did before this role.');
+  L.push('2. Priorities: what they care about, in their own words where possible, not the predecessor\u2019s priorities.');
+  L.push('3. What they inherited: decisions they did not make, commitments they did not choose, and what they would cut or protect.');
+  L.push('4. Who they trust: the people inside the account they listen to, and what those people say about us.');
+  L.push('5. The approach: the best way to open the first meeting, what to bring, and what not to say.');
+  L.push('');
+  L.push('Keep it to one page. If a section has no verified facts, say so instead of guessing.');
+  return L.join('\n');
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { scoreChampion: scoreChampion, promptLinesFor: promptLinesFor, buildChampionPrompt: buildChampionPrompt, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS, SPINE: SPINE, EXIT: EXIT, SITUATIONS: SITUATIONS, VERDICT_WORDS: VERDICT_WORDS };
+  module.exports = { scoreChampion: scoreChampion, promptLinesFor: promptLinesFor, buildChampionPrompt: buildChampionPrompt, buildSuccessorPrompt: buildSuccessorPrompt, CRITERIA: CRITERIA, FLAGS: FLAGS, PLANS: PLANS, SPINE: SPINE, EXIT: EXIT, SITUATIONS: SITUATIONS, VERDICT_WORDS: VERDICT_WORDS };
 }
 
 if (typeof document !== 'undefined') {
@@ -204,9 +244,12 @@ if (typeof document !== 'undefined') {
   var promptboxEl = document.getElementById('promptbox');
   var prompttextEl = document.getElementById('prompttext');
   var copyBtn = document.getElementById('copyprompt');
+  var briefboxEl = document.getElementById('briefbox');
+  var brieftextEl = document.getElementById('brieftext');
+  var copybriefBtn = document.getElementById('copybrief');
 
   var TITLES = {
-    idle: 'Score the four criteria above.',
+    idle: 'Score the five criteria above.',
     good: 'Rebuildable, move now.',
     warn: 'Rebuildable, but thin.',
     bad: 'Too late to rebuild, protect the exit.'
@@ -269,6 +312,12 @@ if (typeof document !== 'undefined') {
     } else {
       promptboxEl.hidden = true;
     }
+    if (r.situation) {
+      brieftextEl.value = buildSuccessorPrompt(state.situation, state.answers, r);
+      briefboxEl.hidden = false;
+    } else {
+      briefboxEl.hidden = true;
+    }
   }
 
   document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function (el) {
@@ -276,6 +325,9 @@ if (typeof document !== 'undefined') {
   });
   copyBtn.addEventListener('click', function () {
     V2.copyText(prompttextEl.value, copyBtn);
+  });
+  copybriefBtn.addEventListener('click', function () {
+    V2.copyText(brieftextEl.value, copybriefBtn);
   });
   document.getElementById('reset').addEventListener('click', function () {
     document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(function (el) {

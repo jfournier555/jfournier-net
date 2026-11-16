@@ -145,13 +145,13 @@ Thesis: a save is a diagnosis first. Most saves fail because the CSM treats the 
 
 ### Champion Departure Playbook: https://jfournier.net/tools/champion-departure-playbook/
 
-Five situations: champion left, no successor named; champion left, successor named but new; champion was promoted internally; champion left for a competitor; champion left and the renewal is within 90 days. Four diagnostic criteria, scored 0/1/2: second relationship in the account (x3), the successor is known (x2), value is documented (x2), renewal date and decision process known (x2). Maximum weighted score 18.
+Five situations: champion left, no successor named; champion left, successor named but new; champion was promoted internally; champion left for a competitor; champion left and the renewal is within 90 days. Five diagnostic criteria, scored 0/1/2: second relationship in the account (x3), the successor is known (x2), the successor's priorities are known (x2), value is documented (x2), renewal date and decision process known (x2). Maximum weighted score 22.
 
 Verdicts: 80% or higher, "Rebuildable, move now." 50–79%, "Rebuildable, but thin." Below 50%, "Too late to rebuild, protect the exit."
 
 Three red flags, any one of which overrides the score to "Too late to rebuild, protect the exit.": the champion was the only relationship and the renewal is within 30 days; the successor has already brought in a competitor; no one inside will take a meeting.
 
-The plan is a 7/14/30-day rebuild spine with a situation-specific first step prepended. A bad verdict gets an exit-protection plan instead of the rebuild spine. Each situation has its own message to the successor and five sharp questions.
+The plan is a 7/14/30-day rebuild spine with a situation-specific first step prepended. A bad verdict gets an exit-protection plan instead of the rebuild spine. Each situation has its own message to the successor and six sharp questions. A second AI prompt builds a research briefing on the successor: background, priorities, what they inherited, who they trust, and the best approach, grounded in Slack, Salesforce, Gong, and LinkedIn.
 
 Thesis: the champion leaving is the highest-stakes event in post-sales. The rebuild is 7/14/30 days, and the first week decides whether the account survives.
 

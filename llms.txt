@@ -53,7 +53,7 @@
 Scorecards diagnose; playbooks are the fix. Each takes a situation, scores a four-question diagnostic, and hands you a sequenced plan, the message to send, and five sharp questions.
 
 - [Renewal Save Playbook](https://jfournier.net/tools/renewal-save-playbook/): a save is a diagnosis first; pick the risk signal, score four diagnostic questions, and get a sequenced 30-day save plan, the message to send, and five sharp questions.
-- [Champion Departure Playbook](https://jfournier.net/tools/champion-departure-playbook/): the champion left; score the 7/14/30-day rebuild and get the plan, the message to the successor, and five sharp questions.
+- [Champion Departure Playbook](https://jfournier.net/tools/champion-departure-playbook/): the champion left; score the 7/14/30-day rebuild and get the plan, the message to the successor, six sharp questions, and a successor research briefing.
 - [Onboarding Time-to-Value Playbook](https://jfournier.net/tools/onboarding-playbook/): the first 30/60 days decide the renewal; score the onboarding and get the 30/60-day sequence, the message, and five sharp questions.
 
 ## Writing
