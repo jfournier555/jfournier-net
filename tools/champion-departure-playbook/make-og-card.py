@@ -64,7 +64,7 @@ d.text((X, 405), "Score the rebuild before the account goes quiet.", font=f_sub,
 
 # Mono detail line.
 f_mono = ImageFont.truetype(MONO, 28)
-d.text((X, 465), "Five criteria · Three red flags · 7/14/30 rebuild", font=f_mono, fill=MONO_GRAY)
+d.text((X, 465), "Six criteria · Three red flags · 7/14/30 rebuild", font=f_mono, fill=MONO_GRAY)
 
 # Site mark, steel-blue mono, same as the site card.
 f_mark = ImageFont.truetype(MONO, 32)

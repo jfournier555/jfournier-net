@@ -69,7 +69,7 @@
 
     <section class="tool-sec" id="criteria">
       <div class="sec-label">Rebuild</div>
-      <div class="sec-title">Five criteria, weighted.</div>
+      <div class="sec-title">Six criteria, weighted.</div>
       <p class="sec-sub">A second relationship carries the most weight. A rebuild with no one to rebuild to is not a rebuild.</p>
 
       <div class="criterion" data-key="second" data-weight="3">
@@ -99,6 +99,16 @@
           <label><input type="radio" name="successor-priorities" value="0"><span>No</span></label>
           <label><input type="radio" name="successor-priorities" value="1"><span>Partial</span></label>
           <label><input type="radio" name="successor-priorities" value="2"><span>Yes</span></label>
+        </div>
+      </div>
+
+      <div class="criterion" data-key="multi-dept" data-weight="2">
+        <h3>Relationships span more than one department <span class="w">WEIGHT ×2</span></h3>
+        <p>Your relationships are not all in one department. One reorg should not take them all out.</p>
+        <div class="opts">
+          <label><input type="radio" name="multi-dept" value="0"><span>No</span></label>
+          <label><input type="radio" name="multi-dept" value="1"><span>Partial</span></label>
+          <label><input type="radio" name="multi-dept" value="2"><span>Yes</span></label>
         </div>
       </div>
 
@@ -137,7 +147,7 @@
     <section class="tool-sec" id="result">
       <div class="verdict idle" id="verdict">
         <div class="v-score" id="v-score">—</div>
-        <div class="v-title" id="v-title">Score the five criteria above.</div>
+        <div class="v-title" id="v-title">Score the six criteria above.</div>
         <p class="v-body" id="v-body">Pick No, Partial, or Yes for each criterion, and pick your situation. The verdict updates live. Check a red flag and the answer is protect the exit, whatever the score says.</p>
         <div class="fixlist" id="fixlist" hidden>
           <h4>Fix first</h4>

@@ -1,6 +1,6 @@
 /* Champion Departure Playbook: scoring logic.
    Pure functions at the top (testable in node); DOM wiring below.
-   Weights: second relationship x3, everything else x2. Max weighted score 22.
+   Weights: second relationship x3, everything else x2. Max weighted score 26.
    No framework dropdown: this is a rebuild, not a sales motion. */
 'use strict';
 
@@ -14,6 +14,9 @@ var CRITERIA = [
   { key: 'successor-priorities', label: 'The successor\u2019s priorities are known', weight: 2,
     rec0: 'You know the name but not what they care about. Find out before the first meeting: their priorities, what they inherited, what they would cut. A rebuild that pitches the predecessor\u2019s priorities to the successor is a pitch to the wrong person.',
     rec1: 'You know some of what the successor cares about. Confirm it in the first meeting. Ask what they need, do not assume the predecessor\u2019s priorities are theirs.' },
+  { key: 'multi-dept', label: 'Relationships span more than one department', weight: 2,
+    rec0: 'All your relationships are in one department. One reorg takes them all out. Find someone in a second department who uses the product and will take your call.',
+    rec1: 'Your relationships are in more than one department, but thin in one of them. Deepen the weaker side before the rebuild, or the successor will see a single-department tool.' },
   { key: 'value-doc', label: 'Value is documented', weight: 2,
     rec0: 'Write the value down now: what the product did, in the customer\u2019s numbers, on one page. A successor who can\u2019t see the value won\u2019t defend it.',
     rec1: 'Put the value in the successor\u2019s terms. Your metrics are not their metrics. Translate them before the first meeting.' },
@@ -249,7 +252,7 @@ if (typeof document !== 'undefined') {
   var copybriefBtn = document.getElementById('copybrief');
 
   var TITLES = {
-    idle: 'Score the five criteria above.',
+    idle: 'Score the six criteria above.',
     good: 'Rebuildable, move now.',
     warn: 'Rebuildable, but thin.',
     bad: 'Too late to rebuild, protect the exit.'
