@@ -169,6 +169,54 @@ Thesis: onboarding speed is the number one leading indicator of NRR. First value
 
 ## Writing
 
+### AI KPIs: What to Measure When the User Isn't Human https://jfournier.net/articles/ai-kpis/
+
+Every metric post sales ever used was an explanation for one thing: a user felt the product working. The user is an agent now. The hands on keyboard proxy is long gone. And here is what replaces them.
+
+I used to open an EBR with the same three numbers. Logins, usage, health score, & value (money/time saves). I would walk in, put them on the screen, and everyone in the room would nod, because we all knew what the numbers meant. People are using it, they like it, they will renew. Unfortunately if you haven't felt it already there's a shift... the people left the product. An agent does the work now, and none of those numbers mean anything about an agent.
+
+Let's reframe.
+
+You used to measure whether someone liked a restaurant by whether they came back, if they ordered dessert, and ultimately if they told a friend. Now nobody walks in the door. A grubhub picks up the food and drops it off, and you are trying to judge the restaurant by how often the grubhub opened the door. That is exactly what logins are now. A door opening, with nobody behind it.
+
+The problem is not that we lack data. The agent generates more data than any human user has. Every call, task, and outcome is logged. The problem is that we are measuring the wrong thing. We built dashboards for humans and pointed it at a machine. Logins do not tell you whether the work got done. Usage does not tell you if anything had changed. A health score built on human behavior cannot score something that has no behavior, only output.
+
+So what do you measure? I keep coming back to three questions, in order. What did the agent do, did the owner see it, and did anything change. And a fourth, for the sales engineers in the room: could the agent do the work in the first place.
+
+One note before the list, because I got this absolutely wrong the first time I tried to explain it. These agent metrics are not new. Task completion and autonomy are a standard way to measure an agent. What is new is the frame. Post sales is not grading its own agent. It is grading the customer's agent, and the renewal turns on the grade.
+
+1. Agent health: did it do the work?
+
+- Task completion rate. Of the jobs the agent was given, how many did it finish using your product. This is the new active users metric. Not who showed up, but what exactly got finished.
+- Autonomy rate. How many finished without a human stepping in. An agent that needs a human every time is a demo, not a deployment. I have seen plenty of demos that looked like deployments until the human in the loop went on holiday.
+- Time to first outcome. How long from deployment until the agent was productive. This is the onboarding metric now. Not time to first login, time to first result. If it takes three months to get a first result, you do not have an onboarding problem. You have a product problem, and the renewal clock is starting to count down.
+
+2. Proof delivery: did the owner see it?
+
+The agent's work is invisible unless someone reports it. The human who owns the agent never felt the product working, so the product has to report back. Proof delivery is how often you send the owner a report of what the agent did, and if the owner opens it. That second half is the metric that matters. A report no one opens is a dashboard no one checked. The owner's attention is the new engagement metric. Not the user activity, the owner attention.
+
+Ask yourself this. If the owner stopped opening the report, would you know, and would you know why? If the answer is no, you are not measuring proof delivery. You are measuring a send.
+
+3. Outcomes: did anything change?
+
+What the agent actually accomplished. Renewals protected, expansions won, hours saved, errors caught, and costs avoided. And the lagging numbers that follow: NRR/GRR. The renewal turns on these, not on logins. If the agent finished the work and the outcome moved, the renewal is a conversation about what comes next. If the outcomes did not move, no usage chart will save it.
+
+This is the part people skip, because outcomes are harder to prove than activity. Activity is a chart. An outcome is a story with a number attached, and someone has to stand behind it in the room. That is still the job.
+
+4. Could the agent do the work at all?
+
+None of the three layers matter if the agent cannot do the job in the first place. Its numbers are the leading indicators of everything above:
+
+- Capability coverage: what percent of product workflows are exposed to agents through APIs or MCP.
+- Tool call success rate: what percent of agent calls succeed, and where they fail.
+- Agent error rate: wrong outputs, bad queries, bad data, the places the agent gets stuck.
+- Documentation legibility: can the agent act from the docs alone, without human help.
+- Endpoint health on the paths agents actually use: latency and uptime where it counts.
+
+If capability coverage is low, task completion will be low. The SE numbers explain the CSM numbers. The CSM measures whether the work landed. The SE measures whether the agent could do the work at all.
+
+The old dashboard measured a relationship. The new one measures a record. Measure what got done, who saw it, and what changed, and you still have something to say in the room. If you're just measuring logins, you have a dashboard full of numbers about a user who no longer exists.
+
 ### AI is taking the admin. The judgment is the job. https://jfournier.net/articles/ai-admin-judgment/
 
 I saw a post making the rounds this week. An entire customer success engine, eight AI agents, copy the whole setup in ten minutes. A router in front, a Notion board behind it, and you just approve the drafts and show up for the conversations that matter.

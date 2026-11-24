@@ -58,6 +58,7 @@ Scorecards diagnose; playbooks are the fix. Each takes a situation, scores a fou
 
 ## Writing
 
+- [AI KPIs: What to Measure When the User Isn't Human](https://jfournier.net/articles/ai-kpis/): every metric post sales ever used assumed a human felt the product working. The user is an agent now, so the KPIs become agent health, proof delivery, outcomes, and the SE half.
 - [AI is taking the admin. The judgment is the job.](https://jfournier.net/articles/ai-admin-judgment/): AI agents can draft the renewal plan, the QBR, and the save plan. What they cannot do is decide, notice out loud, or own the technical case.
 - [MCP Readiness Checker](https://jfournier.net/tools/mcp-readiness/) (companion to the article above): six weighted criteria that score whether an organization is ready to pilot an AI agent connected to real customer data via MCP, with recommendations and a copyable AI follow-up prompt.
 - [The booth is a discovery call with worse acoustics.](https://jfournier.net/articles/booth-discovery/): I did not stop people in their tracks by telling them what my software does. I stopped them with "How's Vegas treating ya?" A booth is a discovery call with worse acoustics.
